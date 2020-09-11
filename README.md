@@ -30,6 +30,18 @@ The phylogenetic relationships between the three major groups of parasitic flatw
 
 ![Competing Hypotheses](data/competing_hypotheses_opist.jpg)
 
+### Let's begin
+
+Before you get going I suggest you download this repository, so have all scripts that you'll need. Ideally you'd do it through `git`.
+```bash
+(user@host)-$ git clone https://github.com/chrishah/phylogenomics-intro.git
+```
+
+Then move into the newly cloned directory, and get ready.
+```bash
+(user@host)-$ cd phylogenomics-intro
+```
+
 __1.) Download data from Genbank__
 
 What's the first species of parasitic flatworm that pops into your head? _Schistosoma mansoni_ perhaps? Let's see if someone has already attempted to sequence its genome. 
