@@ -9,7 +9,7 @@ rule get_seqs:
         ingroup = config["ingroup"],
         outgroup = config["outgroup"]
     params:
-        script = "../scripts/fetch_seqs.sh",
+        script = "./scripts/fetch_seqs.sh",
         prefix = "{BUSCO}",
         dir = config["dir"]
     singularity:
@@ -32,7 +32,7 @@ rule get_outgroups:
     input: 
         rules.get_seqs.output
     params:
-        script = "../scripts/download_outgroups.sh",
+        script = "./scripts/download_outgroups.sh",
         prefix = "{BUSCO}",
 	taxids = config["taxids"]
     log:
@@ -103,7 +103,7 @@ rule remove_empty:
     input:
          rules.score_and_cut.output
     params:
-         script = "../scripts/remove_empty.sh"
+         script = "./scripts/remove_empty.sh"
     output:
          "per_gene/{BUSCO}/empty_check.done"
     shell:
@@ -184,7 +184,7 @@ rule post_filter:
     input:
         expand("per_gene/{BUSCO}/{BUSCO}.raxml.done", BUSCO=config["files"].split(" "))
     params:
-        script = "../scripts/post-filter.sh",
+        script = "./scripts/post-filter.sh",
 	minlen = "100",
 	mincount = "5",
 	minboot = "60"
@@ -226,7 +226,7 @@ rule infer_supermatrix_ML:
     input:
         fasta = rules.concat.output
     params:
-        script = "../scripts/create_partitions.sh"
+        script = "./scripts/create_partitions.sh"
     singularity:
         "docker://chrishah/raxml-docker:8.2.12"
     threads: 4
