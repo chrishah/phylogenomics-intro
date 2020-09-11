@@ -1,35 +1,36 @@
-Clonorchis_sinensis,Trematoda,Eukaryota;Animals;Flatworms,562.769,0,0,0,2,web
-Dugesia_japonica,'Turbellaria',Eukaryota;Animals;Flatworms,854.187,0,0,0,1,web
-Echinococcus canadensis,Cestoda,Eukaryota;Animals;Flatworms,115.025,0,0,0,1,web
-Echinococcus multilocularis,Cestoda,Eukaryota;Animals;Flatworms,114.963,0,0,0,1,web
-Echinostoma caproni,Trematoda,Eukaryota;Animals;Flatworms,834.556,0,0,0,1,web
-Fasciola gigantica,Trematoda,Eukaryota;Animals;Flatworms,1127.75,0,0,0,2,web
-Fasciola hepatica,Trematoda,Eukaryota;Animals;Flatworms,1203.65,0,0,0,4,web
-Fasciolopsis buski,Trematoda,Eukaryota;Animals;Flatworms,748.158,0,0,0,1,web
-Gyrodactylus bullatarudis,Monopisthocotylea,Eukaryota;Animals;Flatworms,84.3469,0,0,0,1,web
-Gyrodactylus salaris,Monopisthocotylea,Eukaryota;Animals;Flatworms,67.3807,0,0,0,1,web
-Hydatigera taeniaeformis,Cestoda,Eukaryota;Animals;Flatworms,103.665,0,0,0,1,web
-Hymenolepis diminuta,Cestoda,Eukaryota;Animals;Flatworms,177.348,0,0,0,3,web
-Hymenolepis microstoma,Cestoda,Eukaryota;Animals;Flatworms,168.943,6,1,0,1,web
-Mesocestoides corti,Cestoda,Eukaryota;Animals;Flatworms,117.182,0,0,0,1,web
-Opisthorchis felineus,Trematoda,Eukaryota;Animals;Flatworms,679.246,0,0,0,1,web
-Opisthorchis viverrini,Trematoda,Eukaryota;Animals;Flatworms,620.453,0,0,0,2,web
-Paragonimus heterotremus,Trematoda,Eukaryota;Animals;Flatworms,841.211,0,0,0,1,web
-Paragonimus westermani,Trematoda,Eukaryota;Animals;Flatworms,922.85,0,1,0,1,web
-Protopolystoma xenopodis,Polyopisthocotylea,Eukaryota;Animals;Flatworms,617.345,0,0,0,1,web
-Rodentolepis nana,Cestoda,Eukaryota;Animals;Flatworms,162.944,0,0,0,1,web
-Schistocephalus solidus,Cestoda,Eukaryota;Animals;Flatworms,539.425,0,0,0,1,web
-Schistosoma bovis,Trematoda,Eukaryota;Animals;Flatworms,373.478,0,1,0,1,web
-Schistosoma japonicum,Trematoda,Eukaryota;Animals;Flatworms,369.901,0,0,0,2,web
-Schistosoma mansoni,Trematoda,Eukaryota;Animals;Flatworms,364.538,8,1,0,1,web
-Schmidtea mediterranea,'Turbellaria',Eukaryota;Animals;Flatworms,942.042,0,0,0,4,web
-Sparganum proliferum,Cestoda,Eukaryota;Animals;Flatworms,653.387,0,0,0,1,web
-Spirometra erinaceieuropaei,Cestoda,Eukaryota;Animals;Flatworms,1258.72,0,0,0,1,web
-Taenia multiceps,Cestoda,Eukaryota;Animals;Flatworms,240.611,7,1,0,1,web
-Taenia saginata,Cestoda,Eukaryota;Animals;Flatworms,169.104,0,0,0,1,web
-Taenia solium,Cestoda,Eukaryota;Animals;Flatworms,129.811,0,0,0,3,web
-Trichobilharzia regenti,Trematoda,Eukaryota;Animals;Flatworms,701.762,0,0,0,1,web
-Kapentagyrus tanganicanus,Monopisthocotylea,,,,,,,data/assemblies/Ktan.PLATANUS.min1000.fasta
-Dictyocotyle coeliaca,Monopisthocotylea,,,,,,,data/assemblies/Dcoe_PLATANUS.scaffolds.min500.fasta
-Diclidophora denticulata,Polyopisthocotylea,,,,,,,data/assemblies/Dden.PLATANUS.min1000.filtered.fasta
-Eudiplozoon_nipponicum,Polyopisthocotylea,,,,,,,data/assemblies/EN_final.genome.scf.fasta
+#species,group,data location
+Clonorchis_sinensis,Trematoda,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/604/175/GCA_003604175.1_ASM360417v1/GCA_003604175.1_ASM360417v1_genomic.fna.gz
+Dugesia_japonica,'Turbellaria',https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/938/525/GCA_001938525.1_Djap_assembly_v1/GCA_001938525.1_Djap_assembly_v1_genomic.fna.gz
+Echinococcus_canadensis,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/invertebrate/Echinococcus_granulosus/latest_assembly_versions/GCF_000524195.1_ASM52419v1/GCF_000524195.1_ASM52419v1_genomic.fna.gz
+Echinococcus_multilocularis,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Echinococcus_multilocularis/latest_assembly_versions/GCA_000469725.3_EMULTI002/GCA_000469725.3_EMULTI002_genomic.fna.gz
+Echinostoma_caproni,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Echinostoma_caproni/latest_assembly_versions/GCA_900618425.1_E_caproni_Egypt_0011_upd/GCA_900618425.1_E_caproni_Egypt_0011_upd_genomic.fna.gz
+Fasciola_gigantica,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Fasciola_gigantica/latest_assembly_versions/GCA_002867515.3_ASM286751v3/GCA_002867515.3_ASM286751v3_genomic.fna.gz
+Fasciola_hepatica,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Fasciola_hepatica/latest_assembly_versions/GCA_900302435.1_Fasciola_10x_pilon/GCA_900302435.1_Fasciola_10x_pilon_genomic.fna.gz
+Fasciolopsis_buski,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Fasciolopsis_buski/latest_assembly_versions/GCA_008360955.1_F_buski_1.0.allpaths-lg/GCA_008360955.1_F_buski_1.0.allpaths-lg_genomic.fna.gz
+Gyrodactylus_bullatarudis,Monopisthocotylea,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Gyrodactylus_bullatarudis/latest_assembly_versions/GCA_012064415.1_ASM1206441v1/GCA_012064415.1_ASM1206441v1_genomic.fna.gz
+Gyrodactylus_salaris,Monopisthocotylea,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Gyrodactylus_salaris/latest_assembly_versions/GCA_000715275.1_Gsalaris_v1/GCA_000715275.1_Gsalaris_v1_genomic.fna.gz
+Hydatigera_taeniaeformis,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Hydatigera_taeniaeformis/latest_assembly_versions/GCA_900622495.1_H_taeniaeformis_Canary_Islands_0011_upd/GCA_900622495.1_H_taeniaeformis_Canary_Islands_0011_upd_genomic.fna.gz
+Hymenolepis_diminuta,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Hymenolepis_diminuta/latest_assembly_versions/GCA_900708905.1_H._diminuta_assembly_from_ERS3052629-ERS3052634/GCA_900708905.1_H._diminuta_assembly_from_ERS3052629-ERS3052634_genomic.fna.gz
+Hymenolepis_microstoma,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Hymenolepis_microstoma/latest_assembly_versions/GCA_000469805.3_HMN_v3/GCA_000469805.3_HMN_v3_genomic.fna.gz
+Mesocestoides_corti,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Mesocestoides_corti/latest_assembly_versions/GCA_900604375.1_M_corti_Specht_Voge_0011_upd/GCA_900604375.1_M_corti_Specht_Voge_0011_upd_genomic.fna.gz
+Opisthorchis_felineus,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Opisthorchis_felineus/latest_assembly_versions/GCA_004794785.1_ICG_Ofel_1.0/GCA_004794785.1_ICG_Ofel_1.0_genomic.fna.gz
+Opisthorchis_viverrini,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/invertebrate/Opisthorchis_viverrini/latest_assembly_versions/GCF_000715545.1_OpiViv1.0/GCF_000715545.1_OpiViv1.0_genomic.fna.gz
+Paragonimus_heterotremus,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Paragonimus_heterotremus/latest_assembly_versions/GCA_013368495.1_P_heterotremus_1.0.allpaths.pg.lrna/GCA_013368495.1_P_heterotremus_1.0.allpaths.pg.lrna_genomic.fna.gz
+Paragonimus_westermani,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Paragonimus_westermani/latest_assembly_versions/GCA_008508345.1_ASM850834v1/GCA_008508345.1_ASM850834v1_genomic.fna.gz
+Protopolystoma_xenopodis,Polyopisthocotylea,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Protopolystoma_xenopodis/latest_assembly_versions/GCA_900617795.1_P_xenopodis_South_Africa_001_upd/GCA_900617795.1_P_xenopodis_South_Africa_001_upd_genomic.fna.gz
+Rodentolepis_nana,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Rodentolepis_nana/latest_assembly_versions/GCA_900617975.1_H_nana_Japan_0011_upd/GCA_900617975.1_H_nana_Japan_0011_upd_genomic.fna.gz
+Schistocephalus_solidus,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Schistocephalus_solidus/latest_assembly_versions/GCA_900618435.1_S_solidus_NST_G2_0011_upd/GCA_900618435.1_S_solidus_NST_G2_0011_upd_genomic.fna.gz
+Schistosoma_bovis,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Schistosoma_bovis/latest_assembly_versions/GCA_003958945.1_ASM395894v1/GCA_003958945.1_ASM395894v1_genomic.fna.gz
+Schistosoma_japonicum,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Schistosoma_japonicum/latest_assembly_versions/GCA_006368765.1_ASM636876v1/GCA_006368765.1_ASM636876v1_genomic.fna.gz
+Schistosoma_mansoni,Trematoda,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/237/925/GCF_000237925.1_ASM23792v2/GCF_000237925.1_ASM23792v2_genomic.fna.gz
+Schmidtea_mediterranea,'Turbellaria',ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Schmidtea_mediterranea/latest_assembly_versions/GCA_002600895.1_ASM260089v1/GCA_002600895.1_ASM260089v1_genomic.fna.gz
+Sparganum_proliferum,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Sparganum_proliferum/latest_assembly_versions/GCA_902702955.1_SprV_v2_2/GCA_902702955.1_SprV_v2_2_genomic.fna.gz
+Spirometra_erinaceieuropaei,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Spirometra_erinaceieuropaei/latest_assembly_versions/GCA_902702965.1_SerJ_v2_0/GCA_902702965.1_SerJ_v2_0_genomic.fna.gz
+Taenia_multiceps,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Taenia_multiceps/latest_assembly_versions/GCA_001923025.3_ASM192302v3/GCA_001923025.3_ASM192302v3_genomic.fna.gz
+Taenia_saginata,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Taenia_saginata/latest_assembly_versions/GCA_001693075.2_ASM169307v2/GCA_001693075.2_ASM169307v2_genomic.fna.gz
+Taenia_solium,Cestoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Taenia_solium/latest_assembly_versions/GCA_002221735.1_solium_assembly_v2.54/GCA_002221735.1_solium_assembly_v2.54_genomic.fna.gz
+Trichobilharzia_regenti,Trematoda,ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/invertebrate/Trichobilharzia_regenti/latest_assembly_versions/GCA_900618515.1_T_regenti_v1_0_4_001_upd/GCA_900618515.1_T_regenti_v1_0_4_001_upd_genomic.fna.gz
+Kapentagyrus_tanganicanus,Monopisthocotylea,data/assemblies/Ktan.PLATANUS.min1000.fasta
+Dictyocotyle_coeliaca,Monopisthocotylea,data/assemblies/Dcoe_PLATANUS.scaffolds.min500.fasta
+Diclidophora_denticulata,Polyopisthocotylea,data/assemblies/Dden.PLATANUS.min1000.filtered.fasta
+Eudiplozoon_nipponicum,Polyopisthocotylea,data/assemblies/EN_final.genome.scf.fasta
