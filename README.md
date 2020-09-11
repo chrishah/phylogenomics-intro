@@ -490,9 +490,9 @@ Snakemake is installed on your system. In order run Snakemake you first need to 
 
 I have set up the Snakefile so that we have to give some parameters to Snakemake via the command line. You could also do that via a configuration file, but like this I am more flexible.
 
-For time reasons, we only want to run the analyses for the first 50 genes that passed our criteria. Let's get them out of the `summary.tsv` file and into a new file `my_subset.txt`.
+For time reasons, we only want to run the analyses for the first 20 genes that passed our criteria. Let's get them out of the `summary.tsv` file and into a new file `my_subset.txt`.
 ```bash
-(snakemake) (user@host)-$ cat summary.tsv | grep -P "\tpass" | head -n 50 | cut -f 1 > my_subset.txt
+(snakemake) (user@host)-$ cat summary.tsv | grep -P "\tpass" | head -n 20 | cut -f 1 > my_subset.txt
 ```
 
 ```bash
