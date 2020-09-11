@@ -46,6 +46,9 @@ Let's get it downloaded. Note that the `(user@host)-$` part of the code below ju
 
 #decompress for future use
 (user@host)-$ gunzip GCF_000237925.1_ASM23792v2_genomic.fna.gz
+
+#leave the directory for now
+(user@host)-$ cd ..
 ```
 We have compiled a list of published genomes that we will be including in our analyses [here](https://github.com/chrishah/phylogenomics-intro/blob/master/data/samples.csv). Ideally we should download them all. You can do one by one or use your scripting skills to get them all in one go. 
 
@@ -54,6 +57,11 @@ Make sure that you download each into a separate directory that should be named 
 __2.) Run BUSCO on each assembly__
 
 First we'll need to download an appropriate reference dataset for BUSCO - pick and choose on their <a href="https://busco-archive.ezlab.org/v3/" title="BUSCO v3" target="_blank">webpage</a>. We go for 'metazoa odb9'.
+
+***Attention***
+> If you're doing this session as part of a course, pause here for a second and only do the download if it's necessary. The BUSCO reference set will likely be provided to participants so that it's not downloaded separately by each.
+
+Below you see how you'd download the dataset. 
 
 ```bash
 (user@host)-$ wget https://busco-archive.ezlab.org/v3/datasets/metazoa_odb9.tar.gz
@@ -205,6 +213,127 @@ EOG091G00VZ     Complete        NC_031495.1     43353623        43366175        
 EOG091G00Z3     Complete        NC_031495.1     21812828        21829893        848.9   769
 ```
 You get the status for all BUSCO genes, wheter they were found complete, duplicated etc., on which sequence in your assembly it was found, how good the match was, length, etc.
+
+__3.) Prefiltering of BUSCO groups__
+
+Now, assuming that we ran BUSCO across a number of genomes, we're going to select us a bunch of BUSCO genes to be included in our analyses. Let's get and overview.
+
+We'd want for example to identify all genes that are not missing data for more than one sample. I have grouped my species into ingroup taxa (the focal group) and outgroup taxa and I've written them to files accordingly. Note that for all of the below to work the names need to fit with the names you gave during the BUSCO run and the download.
+```bash
+(user@host)-$ cat ingroup.txt 
+Clonorchis_sinensis
+Echinococcus_multilocularis
+Fasciola_gigantica
+Gyrodactylus_bullatarudis
+Hymenolepis_diminuta
+Protopolystoma_xenopodis
+Schistosoma_mansoni
+Taenia_solium
+Kapentagyrus_tanganicanus
+Dictyocotyle_coeliaca
+Diclidophora_denticulata
+Eudiplozoon_nipponicum
+
+(user@host)-$ cat outgroup.txt 
+Dugesia_japonica
+Schmidtea_mediterranea
+```
+
+Let's start by looking at a random gene, say `EOG090X00BY`. You can try to do it manually, i.e. go through all the full tables, search for the gene id and take a note of what the status was. For a 1000 genes that's a bit tedious so I wrote a script to do that: `evaluate.py`. It's in the `scripts/` directory of this repository - go [here](https://github.com/chrishah/phylogenomics-intro/blob/master/scripts/evaluate.py), if you're interested in the code.
+
+You can execute it like so:
+```bash
+(user@host)-$ ./scripts/evaluate.py
+usage: evaluate.py [-h] -i IN_LIST [--max_mis_in INT] -o OUT_LIST
+                   [--max_mis_out INT] [--max_avg INT] [--max_med INT] -f
+                   TABLES [TABLES ...] [-B [IDs [IDs ...]]] [--outfile FILE]
+```
+Or, like this, if you want some more info:
+```bash
+(user@host)-$ ./scripts/evaluate.py -h
+usage: evaluate.py [-h] -i IN_LIST [--max_mis_in INT] -o OUT_LIST
+                   [--max_mis_out INT] [--max_avg INT] [--max_med INT] -f
+                   TABLES [TABLES ...] [-B [IDs [IDs ...]]] [--outfile FILE]
+
+Pre-filter BUSCO sets for phylogenomic analyses
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i IN_LIST, --in_list IN_LIST
+                        path to text file containing the list of ingroup taxa
+  --max_mis_in INT      maximum number of samples without data in the ingroup,
+                        default: 0, i.e. all samples have data
+  -o OUT_LIST, --out_list OUT_LIST
+                        path to text file containing the list of outgroup taxa
+  --max_mis_out INT     maximum number of samples without data in the
+                        outgroup, default: 0, i.e. all samples have data
+  --max_avg INT         maximum average number of paralog
+  --max_med INT         maximum median number of paralogs
+  -f TABLES [TABLES ...], --files TABLES [TABLES ...]
+                        full BUSCO results tables that should be evaluated
+                        (space delimited), e.g. -f table1 table2 table3
+  -B [IDs [IDs ...]], --BUSCOs [IDs [IDs ...]]
+                        list of BUSCO IDs to be evaluated, e.g. -B EOG090X0IQO
+                        EOG090X0GLS
+  --outfile FILE        name of outputfile to write results to
+
+```
+
+Let's try it for our BUSCO `EOG090X00BY` across a bunch of BUSCO results. We can stitch together the command by following the info from the help (not showing the output here). Note that I specify tables I have deposited as backup data in the repo, for demonstration. If you actually ran BUSCO yourselve according to the instructions above, you should adjust the paths, to e.g. `./Schistosoma_mansoni/full_table_S_mansoni.tsv` and so forth.
+```bash
+(user@host)-$ ../../bin/evaluate.py \
+-i ingroup.txt -o outgroup.txt --max_mis_in 1 --max_mis_out 1 \
+--max_avg 2 --max_med 2 \
+-B EOG090X00BY \
+-f ../../data/checkpoints/BUSCO_results/Achipteria_coleoptrata/full_table_A_coleoptrata.A_coleoptrata.GEXX01.1.tsv \
+../../data/checkpoints/BUSCO_results/Brevipalpus_yothersi/full_table_B_yothersi.B_yothersi.GCA_003956705.1_VIB_BreviYothersi_1.0.tsv \
+../../data/checkpoints/BUSCO_results/Hermannia_gibba/full_table_H_gibba.H_gibba.GEYB01.1.tsv \
+../../data/checkpoints/BUSCO_results/Hypochthonius_rufulus/full_table_H_rufulus.H_rufulus.GEYP01.1.tsv \
+../../data/checkpoints/BUSCO_results/Nothurs_palustris/full_table_N_palustris.N_palustris.GEYJ01.1.tsv \
+../../data/checkpoints/BUSCO_results/Platynothrus_peltifer/full_table_P_peltifer.P_peltifer.GEYZ01.1.tsv \
+../../data/checkpoints/BUSCO_results/Steganacarus_magnus/full_table_S_magnus.S_magnus.GEYQ01.1.tsv \
+../../data/checkpoints/BUSCO_results/Tetranychus_urticae/full_table_T_urticae.T_urticae.GCF_000239435.1_ASM23943v1.tsv
+```
+
+This BUSCO passes our filter criteria. No more than one sample missing for either the in- or the outgroup, average number of paralogs per sample <= 2 and median number of paralogs is <= 2 , as well. Great.
+With some 'bash-magic' I don't even need to manually list all the tables (not showing the output here) - again, I am just pointing to my backup tables here, if you actually ran all of the above you'd need to adjust to `-f $(find ../../genes/ -name "full_table*")`.
+```bash
+(user@host)-$ ../../bin/evaluate.py \
+-i ingroup.txt -o outgroup.txt --max_mis_in 1 --max_mis_out 1 \
+--max_avg 2 --max_med 2 \
+-B EOG090X00BY \
+-f $(find ../../data/checkpoints/BUSCO_results/ -name "full_table*")
+```
+
+And finally, we can just run it across all BUSCO genes, by not specifying any partiular BUSCO Id. Note that I have provided the name for an output file that will receive the summary.
+```bash
+(user@host)-$ ../../bin/evaluate.py \
+-i ingroup.txt -o outgroup.txt --max_mis_in 1 --max_mis_out 1 \
+--max_avg 2 --max_med 2 \
+--outfile evaluate.all.tsv \
+-f $(find ../../data/checkpoints/BUSCO_results/ -name "full_table*") # or -f $(find ../../genes/ -name "full_table*")
+
+# Ingroup taxa: ['Achipteria_coleoptrata', 'Nothurs_palustris', 'Platynothrus_peltifer', 'Hermannia_gibba', 'Steganacarus_magnus', 'Hypochthonius_rufulus']
+# Outgroup taxa ['Brevipalpus_yothersi', 'Tetranychus_urticae']
+# tables included: ['../../data/checkpoints/BUSCO_results/Nothurs_palustris/full_table_N_palustris.N_palustris.GEYJ01.1.tsv', '../../data/checkpoints/BUSCO_results/Hypochthonius_rufulus/full_table_H_rufulus.H_rufulus.GEYP01.1.tsv', '../../data/checkpoints/BUSCO_results/Tetranychus_urticae/full_table_T_urticae.T_urticae.GCF_000239435.1_ASM23943v1.tsv', '../../data/checkpoints/BUSCO_results/Achipteria_coleoptrata/full_table_A_coleoptrata.A_coleoptrata.GEXX01.1.tsv', '../../data/checkpoints/BUSCO_results/Brevipalpus_yothersi/full_table_B_yothersi.B_yothersi.GCA_003956705.1_VIB_BreviYothersi_1.0.tsv', '../../data/checkpoints/BUSCO_results/Steganacarus_magnus/full_table_S_magnus.S_magnus.GEYQ01.1.tsv', '../../data/checkpoints/BUSCO_results/Platynothrus_peltifer/full_table_P_peltifer.P_peltifer.GEYZ01.1.tsv', '../../data/checkpoints/BUSCO_results/Hermannia_gibba/full_table_H_gibba.H_gibba.GEYB01.1.tsv']
+# maximum number of ingroup samples with missing data: 1
+# maximum number of outgroup samples with missing data: 1
+# maximum average number of paralogs: 2
+# maximum median number of paralogs: 2
+#
+# found BUSCO table for taxon Nothurs_palustris -> ingroup
+# found BUSCO table for taxon Hypochthonius_rufulus -> ingroup
+# found BUSCO table for taxon Tetranychus_urticae -> outgroup
+# found BUSCO table for taxon Achipteria_coleoptrata -> ingroup
+# found BUSCO table for taxon Brevipalpus_yothersi -> outgroup
+# found BUSCO table for taxon Steganacarus_magnus -> ingroup
+# found BUSCO table for taxon Platynothrus_peltifer -> ingroup
+# found BUSCO table for taxon Hermannia_gibba -> ingroup
+# Evaluated 1043 BUSCOs - 940 (90.12 %) passed
+
+```
+
+F
 
 
 

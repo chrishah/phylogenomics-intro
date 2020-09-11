@@ -1,0 +1,5 @@
+7227	Drosophila_melanogaster
+10116	Rattus_norvegicus
+7955	Danio_rerio
+7719	Cionia_intestinalis
+6412	Hellobdella_robusta

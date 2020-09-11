@@ -1,0 +1,12 @@
+Clonorchis_sinensis
+Echinococcus_multilocularis
+Fasciola_gigantica
+Gyrodactylus_bullatarudis
+Hymenolepis_diminuta
+Protopolystoma_xenopodis
+Schistosoma_mansoni
+Taenia_solium
+Kapentagyrus_tanganicanus
+Dictyocotyle_coeliaca
+Diclidophora_denticulata
+Eudiplozoon_nipponicum
