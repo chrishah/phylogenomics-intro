@@ -239,7 +239,7 @@ Dugesia_japonica
 Schmidtea_mediterranea
 ```
 
-Let's start by looking at a random gene, say `EOG090X00BY`. You can try to do it manually, i.e. go through all the full tables, search for the gene id and take a note of what the status was. For a 1000 genes that's a bit tedious so I wrote a script to do that: `evaluate.py`. It's in the `scripts/` directory of this repository - go [here](https://github.com/chrishah/phylogenomics-intro/blob/master/scripts/evaluate.py), if you're interested in the code.
+Let's start by looking at a random gene, say `EOG091G11IM`. You can try to do it manually, i.e. go through all the full tables, search for the gene id and take a note of what the status was. For a 1000 genes that's a bit tedious so I wrote a script to do that: `evaluate.py`. It's in the `scripts/` directory of this repository - go [here](https://github.com/chrishah/phylogenomics-intro/blob/master/scripts/evaluate.py), if you're interested in the code.
 
 You can execute it like so:
 ```bash
@@ -279,62 +279,266 @@ optional arguments:
 
 ```
 
-Let's try it for our BUSCO `EOG090X00BY` across a bunch of BUSCO results. We can stitch together the command by following the info from the help (not showing the output here). Note that I specify tables I have deposited as backup data in the repo, for demonstration. If you actually ran BUSCO yourselve according to the instructions above, you should adjust the paths, to e.g. `./Schistosoma_mansoni/full_table_S_mansoni.tsv` and so forth.
+Let's try it for our BUSCO `EOG091G11IM` across a bunch of BUSCO results. We can stitch together the command by following the info from the help (not showing the output here). Note that I specify tables I have deposited as backup data in the repo, for demonstration. If you actually ran BUSCO yourselve according to the instructions above, you should adjust the paths, to e.g. `./Schistosoma_mansoni/full_table_S_mansoni.tsv` and so forth.
 ```bash
-(user@host)-$ ../../bin/evaluate.py \
--i ingroup.txt -o outgroup.txt --max_mis_in 1 --max_mis_out 1 \
---max_avg 2 --max_med 2 \
--B EOG090X00BY \
--f ../../data/checkpoints/BUSCO_results/Achipteria_coleoptrata/full_table_A_coleoptrata.A_coleoptrata.GEXX01.1.tsv \
-../../data/checkpoints/BUSCO_results/Brevipalpus_yothersi/full_table_B_yothersi.B_yothersi.GCA_003956705.1_VIB_BreviYothersi_1.0.tsv \
-../../data/checkpoints/BUSCO_results/Hermannia_gibba/full_table_H_gibba.H_gibba.GEYB01.1.tsv \
-../../data/checkpoints/BUSCO_results/Hypochthonius_rufulus/full_table_H_rufulus.H_rufulus.GEYP01.1.tsv \
-../../data/checkpoints/BUSCO_results/Nothurs_palustris/full_table_N_palustris.N_palustris.GEYJ01.1.tsv \
-../../data/checkpoints/BUSCO_results/Platynothrus_peltifer/full_table_P_peltifer.P_peltifer.GEYZ01.1.tsv \
-../../data/checkpoints/BUSCO_results/Steganacarus_magnus/full_table_S_magnus.S_magnus.GEYQ01.1.tsv \
-../../data/checkpoints/BUSCO_results/Tetranychus_urticae/full_table_T_urticae.T_urticae.GCF_000239435.1_ASM23943v1.tsv
+(user@host)-$ ./scripts/evaluate.py \
+-i ingroup.txt -o outgroup.txt --max_mis_in 2 --max_mis_out 1 \
+--max_avg 1 --max_med 1 \
+-B EOG091G11IM \
+-f /home/classdata/Day5/BUSCO_runs/Taenia_solium/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Schistosoma_mansoni/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Echinococcus_multilocularis/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Hymenolepis_diminuta/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Fasciola_gigantica/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Dictyocotyle_coeliaca/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Kapentagyrus_tanganicanus/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Protopolystoma_xenopodis/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Eudiplozoon_nipponicum/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Clonorchis_sinensis/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Dugesia_japonica/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Schmidtea_mediterranea/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Gyrodactylus_bullatarudis/run_busco/full_table_busco.tsv \
+/home/classdata/Day5/BUSCO_runs/Diclidophora_denticulata/run_busco/full_table_busco.tsv
 ```
 
 This BUSCO passes our filter criteria. No more than one sample missing for either the in- or the outgroup, average number of paralogs per sample <= 2 and median number of paralogs is <= 2 , as well. Great.
-With some 'bash-magic' I don't even need to manually list all the tables (not showing the output here) - again, I am just pointing to my backup tables here, if you actually ran all of the above you'd need to adjust to `-f $(find ../../genes/ -name "full_table*")`.
+With some 'bash-magic' I don't even need to manually list all the tables (not showing the output here) - again, I am just pointing to my backup tables here, if you actually ran all of the above you'd need to adjust to `-f $(find /home/classdata/Day5/BUSCO_runs/ -name "full_table*")`.
 ```bash
-(user@host)-$ ../../bin/evaluate.py \
--i ingroup.txt -o outgroup.txt --max_mis_in 1 --max_mis_out 1 \
+(user@host)-$ ./scripts/evaluate.py \
+-i ingroup.txt -o outgroup.txt --max_mis_in 2 --max_mis_out 1 \
 --max_avg 2 --max_med 2 \
--B EOG090X00BY \
--f $(find ../../data/checkpoints/BUSCO_results/ -name "full_table*")
+-B EOG091G11IM \
+-f $(find /home/classdata/Day5/BUSCO_runs/ -name "full_table*")
 ```
 
-And finally, we can just run it across all BUSCO genes, by not specifying any partiular BUSCO Id. Note that I have provided the name for an output file that will receive the summary.
+And finally, we can run it across all BUSCO genes, by not specifying any partiular BUSCO Id. Note that I have provided the name for an output file that will receive the summary.
 ```bash
-(user@host)-$ ../../bin/evaluate.py \
--i ingroup.txt -o outgroup.txt --max_mis_in 1 --max_mis_out 1 \
---max_avg 2 --max_med 2 \
---outfile evaluate.all.tsv \
--f $(find ../../data/checkpoints/BUSCO_results/ -name "full_table*") # or -f $(find ../../genes/ -name "full_table*")
-
-# Ingroup taxa: ['Achipteria_coleoptrata', 'Nothurs_palustris', 'Platynothrus_peltifer', 'Hermannia_gibba', 'Steganacarus_magnus', 'Hypochthonius_rufulus']
-# Outgroup taxa ['Brevipalpus_yothersi', 'Tetranychus_urticae']
-# tables included: ['../../data/checkpoints/BUSCO_results/Nothurs_palustris/full_table_N_palustris.N_palustris.GEYJ01.1.tsv', '../../data/checkpoints/BUSCO_results/Hypochthonius_rufulus/full_table_H_rufulus.H_rufulus.GEYP01.1.tsv', '../../data/checkpoints/BUSCO_results/Tetranychus_urticae/full_table_T_urticae.T_urticae.GCF_000239435.1_ASM23943v1.tsv', '../../data/checkpoints/BUSCO_results/Achipteria_coleoptrata/full_table_A_coleoptrata.A_coleoptrata.GEXX01.1.tsv', '../../data/checkpoints/BUSCO_results/Brevipalpus_yothersi/full_table_B_yothersi.B_yothersi.GCA_003956705.1_VIB_BreviYothersi_1.0.tsv', '../../data/checkpoints/BUSCO_results/Steganacarus_magnus/full_table_S_magnus.S_magnus.GEYQ01.1.tsv', '../../data/checkpoints/BUSCO_results/Platynothrus_peltifer/full_table_P_peltifer.P_peltifer.GEYZ01.1.tsv', '../../data/checkpoints/BUSCO_results/Hermannia_gibba/full_table_H_gibba.H_gibba.GEYB01.1.tsv']
-# maximum number of ingroup samples with missing data: 1
+(user@host)-$ ./scripts/evaluate.py \
+-i ingroup.txt -o outgroup.txt --max_mis_in 4 --max_mis_out 1 \
+--max_avg 1 --max_med 1 \
+--outfile summary.tsv \
+-f $(find /home/classdata/Day5/BUSCO_runs/ -name "full_table*") 
+# Ingroup taxa: ['Clonorchis_sinensis', 'Echinococcus_multilocularis', 'Fasciola_gigantica', 'Gyrodactylus_bullatarudis', 'Hymenolepis_diminuta', 'Protopolystoma_xenopodis', 'Schistosoma_mansoni', 'Taenia_solium', 'Kapentagyrus_tanganicanus', 'Dictyocotyle_coeliaca', 'Diclidophora_denticulata', 'Eudiplozoon_nipponicum']
+# Outgroup taxa ['Dugesia_japonica', 'Schmidtea_mediterranea']
+# tables included: ['/home/classdata/Day5/BUSCO_runs/Taenia_solium/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Schistosoma_mansoni/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Echinococcus_multilocularis/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Hymenolepis_diminuta/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Fasciola_gigantica/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Dictyocotyle_coeliaca/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Kapentagyrus_tanganicanus/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Protopolystoma_xenopodis/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Eudiplozoon_nipponicum/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Clonorchis_sinensis/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Dugesia_japonica/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Schmidtea_mediterranea/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Gyrodactylus_bullatarudis/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Diclidophora_denticulata/run_busco/full_table_busco.tsv']
+# maximum number of ingroup samples with missing data: 4
 # maximum number of outgroup samples with missing data: 1
-# maximum average number of paralogs: 2
-# maximum median number of paralogs: 2
+# maximum average number of paralogs: 1
+# maximum median number of paralogs: 1
 #
-# found BUSCO table for taxon Nothurs_palustris -> ingroup
-# found BUSCO table for taxon Hypochthonius_rufulus -> ingroup
-# found BUSCO table for taxon Tetranychus_urticae -> outgroup
-# found BUSCO table for taxon Achipteria_coleoptrata -> ingroup
-# found BUSCO table for taxon Brevipalpus_yothersi -> outgroup
-# found BUSCO table for taxon Steganacarus_magnus -> ingroup
-# found BUSCO table for taxon Platynothrus_peltifer -> ingroup
-# found BUSCO table for taxon Hermannia_gibba -> ingroup
-# Evaluated 1043 BUSCOs - 940 (90.12 %) passed
+# found BUSCO table for taxon Taenia_solium -> ingroup
+# found BUSCO table for taxon Schistosoma_mansoni -> ingroup
+# found BUSCO table for taxon Echinococcus_multilocularis -> ingroup
+# found BUSCO table for taxon Hymenolepis_diminuta -> ingroup
+# found BUSCO table for taxon Fasciola_gigantica -> ingroup
+# found BUSCO table for taxon Dictyocotyle_coeliaca -> ingroup
+# found BUSCO table for taxon Kapentagyrus_tanganicanus -> ingroup
+# found BUSCO table for taxon Protopolystoma_xenopodis -> ingroup
+# found BUSCO table for taxon Eudiplozoon_nipponicum -> ingroup
+# found BUSCO table for taxon Clonorchis_sinensis -> ingroup
+# found BUSCO table for taxon Dugesia_japonica -> outgroup
+# found BUSCO table for taxon Schmidtea_mediterranea -> outgroup
+# found BUSCO table for taxon Gyrodactylus_bullatarudis -> ingroup
+# found BUSCO table for taxon Diclidophora_denticulata -> ingroup
+# Evaluated 894 BUSCOs - 358 (40.04 %) passed
 
 ```
+__4.) For each BUSCO group__
 
-F
+For each of the BUSCOs that passed we want to:
+ - bring together all sequences from all samples in one file
+ - do multiple sequence alignment
+ - filter the alignment, i.e. remove ambiguous/problematic positions
+ - build a phylogenetic tree
 
 
+Here are all steps for `EOG091G11IM` as an example. I have deposited the intiial fasta file in the data directory.
+```bash
+(user@host)-$ mkdir per_gene_manual
+(user@host)-$ cd per_gene_manual
+(user@host)-$ mkdir EOG091G11IM
+(user@host)-$ cd EOG091G11IM
+(user@host)-$ bash ../../scripts/fetch_seqs.sh EOG091G11IM \
+/home/classdata/Day5/BUSCO_runs/ ../../ingroup.txt ../../outgroup.txt
+```
+
+Now, step by step.
+Specify the name of the BUSCO gene and the number of CPU cores to use for analyses in variables so you don't have to type it out every time.
+```bash
+(user@host)-$ ID=EOG091G11IM
+(user@host)-$ threads=2
+```
+
+Perform multiple sequence alignment with [clustalo](http://www.clustal.org/omega/).
+```bash
+(user@host)-$ docker run --rm \
+-v $(pwd):/in -w /in \
+chrishah/clustalo-docker:1.2.4 \
+clustalo -i $ID.fasta -o $ID.clustalo.aln.fasta --threads=$threads
+```
+
+We can then look at the alignment result. There is a number of programs available to do that, e.g. MEGA, Jalview, Aliview, or you can do it online. A link to the upload client for the NCBI Multiple Sequence Alignment Viewer is [here](https://www.ncbi.nlm.nih.gov/projects/msaviewer/?appname=ncbi_msav&openuploaddialog) (I suggest to open in new tab). Upload (`EOG091G11IM.clustalo.aln.fasta`), press 'Close' button, and have a look.
+
+What do you think? It's actually quite messy.. 
+
+Let's move on to score and filter the alignment, using [Aliscore](https://www.zfmk.de/en/research/research-centres-and-groups/aliscore) and [Alicut](https://github.com/PatrickKueck/AliCUT) programs. 
+```bash
+(user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/alicut-aliscore-docker:2.31 \
+Aliscore.pl -N -r 200000000000000000 -i $ID.clustalo.aln.fasta &> aliscore.log
+(user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/alicut-aliscore-docker:2.31 \
+ALICUT.pl -s &> alicut.log
+```
+Try open the upload [dialog](https://www.ncbi.nlm.nih.gov/projects/msaviewer/?appname=ncbi_msav&openuploaddialog) for the Alignment viewer in a new tab and upload the new file (`ALICUT_EOG091G11IM.clustalo.aln.fasta`).
+What do you think? The algorithm has removed quite a bit of the original alignment, reducing it to only ~100, but these look much better. 
+
+Find best model of evolution for phylogenetic inference (first set up a new directory to keep things organized) using a script from [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/).
+```bash
+(user@host)-$ mkdir find_best_model
+(user@host)-$ cd find_best_model
+(user@host)-$ cp ../ALICUT_$ID.clustalo.aln.fasta .
+
+(user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/raxml-docker:8.2.12 \
+ProteinModelSelection.pl ALICUT_$ID.clustalo.aln.fasta > $ID.bestmodel
+
+(user@host)-$ cd .. #move back to the base directory (if you forget the following will not work, because the location of the files will not fit to the command - happened to me before ;-)
+```
+
+Infer phylogenetic tree using [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/). The first line just reads the output from the previous command, i.e. the best model, reformats it and saves it in a variable. 
+
+The RAxML command in a nutshell:
+ - `-f a` - use rapid bootstrapping mode (search for the best-scoring ML tree and run bootstrap in one analysis)
+ - `-T` - number of CPU threads to use
+ - `-m` - model of protein evolution - note that we add in the content of our variable `$RAxMLmodel`
+ - `-p 12345` - Specify a random number seed for the parsimony inferences (which give will become the basis for the ML inference, which is much more computationally intensive). The number doesn't affect the result, but it allows you to reproduce your analyses, so run twice with the same seed, should give the exact same tree.
+ - `-x 12345` - seed number for rapid bootstrapping. For reproducibility, similar to above.
+ - `-# $bs` - number of bootstrap replicates - note that we put the variable `$bs` here that we've defined above
+ - `-s` - input fasta file (the filtered alignemnt)
+ - `-n` - prefix for output files to be generated
+
+```bash
+(user@host)-$ RAxMLmodel=$(cat find_best_model/$ID.bestmodel | grep "Best" | cut -d ":" -f 2 | tr -d '[:space:]') #this line reads in the file that countains the output from the best model search, reformats it and saves it to a variable
+(user@host)-$ bs=100 #set the number of bootstrap replicates
+(user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/raxml-docker:8.2.12 \
+raxml -f a -T $threads -m PROTGAMMA$RAxMLmodel \
+-p 12345 -x 12345 -# $bs \
+-s ALICUT_$ID.clustalo.aln.fasta -n $ID.clustalo.aln.ALICUT.$RAxMLmodel
+```
+
+This runs for a while. RAxML produces a log file (`RAxML_info.EOG091G11IM.clustalo.aln.ALICUT.JTTF`) that we can inspect. Just looking at the last 15 lines with the `tail` command.
+```bash
+(user@host)-$ tail -n 15 RAxML_info.EOG091G11IM.clustalo.aln.ALICUT.JTTF
 
 
+Found 1 tree in File /in/RAxML_bestTree.EOG091G11IM.clustalo.aln.ALICUT.JTTF
+
+Program execution info written to /in/RAxML_info.EOG091G11IM.clustalo.aln.ALICUT.JTTF
+All 100 bootstrapped trees written to: /in/RAxML_bootstrap.EOG091G11IM.clustalo.aln.ALICUT.JTTF
+
+Best-scoring ML tree written to: /in/RAxML_bestTree.EOG091G11IM.clustalo.aln.ALICUT.JTTF
+
+Best-scoring ML tree with support values written to: /in/RAxML_bipartitions.EOG091G11IM.clustalo.aln.ALICUT.JTTF
+
+Best-scoring ML tree with support values as branch labels written to: /in/RAxML_bipartitionsBranchLabels.EOG091G11IM.clustalo.aln.ALICUT.JTTF
+
+Overall execution time for full ML analysis: 85.772520 secs or 0.023826 hours or 0.000993 days
+```
+
+And of course, we get our best scoring Maximum Likelihood tree.
+```bash
+(user@host)-$ cat RAxML_bipartitions.EOG091G11IM.clustalo.aln.ALICUT.JTTF 
+(((Dugesia_japonica:0.04540905387157418566,Schmidtea_mediterranea:0.07848925176084055322)100:1.16715518034492538035,Protopolystoma_xenopodis:0.11079416545156400842)39:0.04487589776655191015,(((Dictyocotyle_coeliaca:0.21647112350310823703,(Kapentagyrus_tanganicanus:0.58585884381059250003,Gyrodactylus_bullatarudis:0.24863115243060615600)68:0.14361691889338459860)75:0.23455875734067299643,(Hymenolepis_diminuta:0.22780085806789415748,(Taenia_solium:0.01804635499578595079,Echinococcus_multilocularis:0.08482638895881837449)98:0.07679331284949014735)99:0.45065101264083423649)16:0.00536417294447177374,(Schistosoma_mansoni:0.22242908934952307365,Clonorchis_sinensis:0.19548372348592255032)97:0.19831350728023106056)38:0.05773372192722324436,Eudiplozoon_nipponicum:0.29043867944508250378);
+```
+.. in the Newick tree format. There is a bunch of programs that allow you to view and manipulate trees in this format. You can only do it online, for example through [iTOL](https://itol.embl.de/upload.cgi), embl's online tree viewer. There is others, e.g. [ETE3](http://etetoolkit.org/treeview/), [icytree](https://icytree.org/), or [trex](http://www.trex.uqam.ca/index.php?action=newick&project=trex). You can try it out.
+
+Now, let's say we want to go over this process for each of the hundreds of genes that passd our filtering criteria. A script that does all the above steps run for each BUSCO would do it. A very neat way of handling this kind of thing is [Snakemake](https://snakemake.readthedocs.io/en/stable/).
+
+__5.) Automate the workflow with Snakemake__
+
+Remember our `summary.tsv` file from before? Let's move to where this is located.
+```bash
+(user@host)-$ cd ../../
+```
+
+Here, we also have a `Snakefile.txt` (it came with the repository that you downloaded). This file contains the instructions for running a workflow with Snakemake. Let's have a look.
+
+```bash
+(user@host)-$ less Snakefile.txt #exit less with 'q'
+```
+
+In the Snakefile you'll see 'rules' (that's what individual steps in the analyses are called in the Snakemake world). Some of which should look familiar, because we just ran them manually. Filenames etc. are replaced with variables but other than that..
+
+In addition to the steps we just did manually, the workflow will also create a concatenated alignment - a 'supermatrix' - once all indiviual alignments are finished, and then run `RAxML` a final time on the supermatrix, taking into account the individual best models of protein evolution for each gene that we have identified.
+
+Snakemake is installed on your system. In order run Snakemake you first need to enter a `conda` environment that we've set up. 
+
+```bash
+(user@host)-$ conda activate snakemake
+(snakemake) (user@host)-$ snakemake -h
+```
+
+I have set up the Snakefile so that we have to give some parameters to Snakemake via the command line. You could also do that via a configuration file, but like this I am more flexible.
+
+For time reasons, we only want to run the analyses for the first 50 genes that passed our criteria. Let's get them out of the `summary.tsv` file and into a new file `my_subset.txt`.
+```bash
+(snakemake) (user@host)-$ cat summary.tsv | grep -P "\tpass" | head -n 50 | cut -f 1 > my_subset.txt
+```
+
+```bash
+(snakemake) (user@host)-$ snakemake -n -s Snakefile.txt \
+--use-singularity --singularity-args "-B $(pwd) -B /home/classdata/Day5/" \
+--latency-wait 50 \
+-j 4 -p \
+--config \
+dir=/home/classdata/Day5/BUSCO_runs \
+ingroup="$(pwd)/ingroup.txt" outgroup="$(pwd)/outgroup.txt" \
+files="$(cat my_subset.txt | tr '\n' ' ' | sed 's/ $//')" \
+taxids="$(pwd)/taxids.txt"
+```
+
+Now, this was a dry run, and you kind of get an idea what will be happening. No erros, so everything seems to be fine. Shall we try it for real? Rerun, but ommit the `-n` flag this time - this told Snakemake that we only wanted a dry run.
+
+```bash
+(snakemake) (user@host)-$ snakemake -n -s Snakefile.txt \
+--use-singularity --singularity-args "-B $(pwd) -B /home/classdata/Day5/" \
+--latency-wait 50 \
+-j 4 -p \
+--config \
+dir=/home/classdata/Day5/BUSCO_runs \
+ingroup="$(pwd)/ingroup.txt" outgroup="$(pwd)/outgroup.txt" \
+files="$(cat my_subset.txt | tr '\n' ' ' | sed 's/ $//')" \
+taxids="$(pwd)/taxids.txt"
+```
+
+Once this is done the final tree is written to `phylogenomics-ML/RAxML_bipartitions.final`. Let's have a look, by pasting it into [iTOL](https://itol.embl.de/upload.cgi). Note that I am displaying a larger tree I have inferred as backup. 
+```bash
+(snakemake) (user@host)-$ cat data/RAxML_bipartitions.final
+(Rodentolepis_nana:0.03684667540504209943,(Hymenolepis_diminuta:0.05365320128818799189,((Mesocestoides_corti:0.11382175458723173267,((((Kapentagyrus_tanganicanus:0.37056695730754030116,((Gyrodactylus_bullatarudis:0.23973499259064837141,Gyrodactylus_salaris:0.26186250827709700584)100:0.33531984156394206709,Dictyocotyle_coeliaca:0.33468595952253094028)78:0.04321815271258070551)100:0.13630735625407652822,((Drosophila_melanogaster:0.49739815989886448921,(Cionia_intestinalis:0.47024946596909422691,(Danio_rerio:0.15906656119182147058,Rattus_norvegicus:0.14256395229098053901)100:0.17546133837449690018)89:0.07534725451188568901)100:0.23686787431138991988,(Schmidtea_mediterranea:0.09265905798734777599,Dugesia_japonica:0.10758755163140210076)100:0.49082413635911525951)100:0.11721256073439016709)99:0.04514198592165186152,(((((Fasciolopsis_buski:0.12314202132856488792,(Fasciola_gigantica:0.14686458395490634143,Fasciola_hepatica:0.04904295105908970664)100:0.04110413255140191180)100:0.02400932038248752842,Echinostoma_caproni:0.12849775075359745613)100:0.09450712362479178619,((Paragonimus_heterotremus:0.07823113191895705865,Paragonimus_westermani:0.07312617177590630124)100:0.10846325959356475921,(Clonorchis_sinensis:0.01770115338741783811,(Opisthorchis_viverrini:0.04817423183688491345,Opisthorchis_felineus:0.04544915068851628631)99:0.00657747865734801054)100:0.12524751424784802412)100:0.04426753715195563127)100:0.06790551400483556266,(Trichobilharzia_regenti:0.12567820298270102053,((Schistosoma_mansoni:0.03653156631204165783,Schistosoma_bovis:0.03990340723740078838)100:0.03657038711521183594,Schistosoma_japonicum:0.10768987330529999902)100:0.03415232070419779026)100:0.13566805310046556321)100:0.10769581211852248537,(Protopolystoma_xenopodis:0.24790699440159275069,(Eudiplozoon_nipponicum:0.27562366428684492714,Diclidophora_denticulata:0.13559800727544354948)100:0.18855942925413535227)100:0.10123952603231373137)79:0.03248939271548581531)100:0.15918341908895150549,(Schistocephalus_solidus:0.05308211462818494819,(Sparganum_proliferum:0.05627350778340294013,Spirometra_erinaceieuropaei:0.02427653023662926582)100:0.04156928305134222068)100:0.14572812698839465728)100:0.10312201304300923355)100:0.04960481839566012463,((Hydatigera_taeniaeformis:0.06995673418424694368,((Taenia_saginata:0.00993938860823944878,Taenia_multiceps:0.01831445652767186433)100:0.01231540977111486058,Taenia_solium:0.02397521754854715914)100:0.02957522174137439119)90:0.01077369939674101620,(Echinococcus_multilocularis:0.01421602883589030003,Echinococcus_canadensis:0.01188040184204420743)100:0.03694741512317966520)100:0.06038755425646366581)100:0.14186474816667632437)100:0.03517208801464582341,Hymenolepis_microstoma:0.03958746079266604878);
+```
+
+We can calculate the tree and internode certainties and map them onto our best ML tree.
+```bash
+#concatenate all individual gene trees that were used in the supermatrix
+(snakemake) (user@host)-$ cd phylogenomics-ML
+(snakemake) (user@host)-$ cat $(for t in $(cat partitions.txt | cut -d " " -f 2); do ls ../per_gene/$t/RAxML_bipartitions.$t.clustalo.aln.ALICUT*; done) > trees.tre
+#calculate tree / internode certainty values and map them on the best ML tree
+(snakemake) (user@host)-$ docker run --rm \
+-v $(pwd):/in -w /in \
+chrishah/raxml-docker:8.2.12 \
+raxml -f i -t RAxML_bipartitions.final -z trees.tre -m GTRCAT -n TC
+```
+
+The tree comes in an usual format and I have a script that converts it to something that can be interpreted by commonly used tree viewers.
+```bash
+(snakemake) (user@host)-$ bash ../scripts/convert_tree.sh RAxML_Corrected_Lossless_IC_Score_BranchLabels.TC > reformated.RAxML_Corrected_Lossless_IC_Score_BranchLabels.TC 
+```
+
+Let's have a look with [iTOL](https://itol.embl.de/upload.cgi). Note, I am again displaying a tree I have inferred as backup.
+```bash
+(snakemake) (user@host)-$ cat data/reformated.RAxML_Corrected_Lossless_IC_Score_BranchLabels.TC 
+(((Mesocestoides_corti:0.11382175458723173267,((((Kapentagyrus_tanganicanus:0.37056695730754030116,((Gyrodactylus_bullatarudis:0.23973499259064837141,Gyrodactylus_salaris:0.26186250827709700584)0.813:0.33531984156394206709,Dictyocotyle_coeliaca:0.33468595952253094028)0.477:0.04321815271258070551)0.804:0.13630735625407652822,((Drosophila_melanogaster:0.49739815989886448921,(Cionia_intestinalis:0.47024946596909422691,(Danio_rerio:0.15906656119182147058,Rattus_norvegicus:0.14256395229098053901)0.821:0.17546133837449690018)0.561:0.07534725451188568901)0.697:0.23686787431138991988,(Schmidtea_mediterranea:0.09265905798734777599,Dugesia_japonica:0.10758755163140210076)0.703:0.49082413635911525951)0.520:0.11721256073439016709)0.189:0.04514198592165186152,(((((Fasciolopsis_buski:0.12314202132856488792,(Fasciola_gigantica:0.14686458395490634143,Fasciola_hepatica:0.04904295105908970664)0.561:0.04110413255140191180)0.609:0.02400932038248752842,Echinostoma_caproni:0.12849775075359745613)0.206:0.09450712362479178619,((Paragonimus_heterotremus:0.07823113191895705865,Paragonimus_westermani:0.07312617177590630124)0.690:0.10846325959356475921,(Clonorchis_sinensis:0.01770115338741783811,(Opisthorchis_viverrini:0.04817423183688491345,Opisthorchis_felineus:0.04544915068851628631)0.477:0.00657747865734801054)0.841:0.12524751424784802412)0.619:0.04426753715195563127)0.189:0.06790551400483556266,(Trichobilharzia_regenti:0.12567820298270102053,((Schistosoma_mansoni:0.03653156631204165783,Schistosoma_bovis:0.03990340723740078838)0.789:0.03657038711521183594,Schistosoma_japonicum:0.10768987330529999902)0.541:0.03415232070419779026)0.835:0.13566805310046556321)0.817:0.10769581211852248537,(Protopolystoma_xenopodis:0.24790699440159275069,(Eudiplozoon_nipponicum:0.27562366428684492714,Diclidophora_denticulata:0.13559800727544354948)1.000:0.18855942925413535227)0.278:0.10123952603231373137)0.328:0.03248939271548581531)0.838:0.15918341908895150549,(Schistocephalus_solidus:0.05308211462818494819,(Sparganum_proliferum:0.05627350778340294013,Spirometra_erinaceieuropaei:0.02427653023662926582)1.000:0.04156928305134222068)1.000:0.14572812698839465728)0.419:0.10312201304300923355)0.337:0.04960481839566012463,((Hydatigera_taeniaeformis:0.06995673418424694368,((Taenia_saginata:0.00993938860823944878,Taenia_multiceps:0.01831445652767186433)0.598:0.01231540977111486058,Taenia_solium:0.02397521754854715914)0.690:0.02957522174137439119)0.189:0.01077369939674101620,(Echinococcus_multilocularis:0.01421602883589030003,Echinococcus_canadensis:0.01188040184204420743)0.804:0.03694741512317966520)0.481:0.06038755425646366581)0.828:0.14186474816667632437,(Hymenolepis_microstoma:0.03958746079266604878,Rodentolepis_nana:0.03684667540504209943)0.809:0.03517208801464582341,Hymenolepis_diminuta:0.05365320128818799189);
+```
+
+__What do you think?__
+
+# Contact
+Christoph Hahn - <christoph.hahn@uni-graz.at>
