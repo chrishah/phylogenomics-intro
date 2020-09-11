@@ -1,0 +1,7 @@
+#program,version,docker container ID
+BUSCO,3.1.0,chrishah/busco-docker:v3.1.0
+blastp,2.6.0,chrishah/ncbi-blast:v2.6.0
+clustalo,1.2.4,chrishah/clustalo-docker:1.2.4
+Alicut & Aliscore,2.31,chrishah/alicut-aliscore-docker:2.31
+FASconCAT,1.0.4,chrishah/fasconcat-g:1.04
+RAxML,8.2.12,chrishah/raxml-docker:8.2.12

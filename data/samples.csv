@@ -1,0 +1,35 @@
+Clonorchis_sinensis,Trematoda,Eukaryota;Animals;Flatworms,562.769,0,0,0,2,web
+Dugesia_japonica,'Turbellaria',Eukaryota;Animals;Flatworms,854.187,0,0,0,1,web
+Echinococcus canadensis,Cestoda,Eukaryota;Animals;Flatworms,115.025,0,0,0,1,web
+Echinococcus multilocularis,Cestoda,Eukaryota;Animals;Flatworms,114.963,0,0,0,1,web
+Echinostoma caproni,Trematoda,Eukaryota;Animals;Flatworms,834.556,0,0,0,1,web
+Fasciola gigantica,Trematoda,Eukaryota;Animals;Flatworms,1127.75,0,0,0,2,web
+Fasciola hepatica,Trematoda,Eukaryota;Animals;Flatworms,1203.65,0,0,0,4,web
+Fasciolopsis buski,Trematoda,Eukaryota;Animals;Flatworms,748.158,0,0,0,1,web
+Gyrodactylus bullatarudis,Monopisthocotylea,Eukaryota;Animals;Flatworms,84.3469,0,0,0,1,web
+Gyrodactylus salaris,Monopisthocotylea,Eukaryota;Animals;Flatworms,67.3807,0,0,0,1,web
+Hydatigera taeniaeformis,Cestoda,Eukaryota;Animals;Flatworms,103.665,0,0,0,1,web
+Hymenolepis diminuta,Cestoda,Eukaryota;Animals;Flatworms,177.348,0,0,0,3,web
+Hymenolepis microstoma,Cestoda,Eukaryota;Animals;Flatworms,168.943,6,1,0,1,web
+Mesocestoides corti,Cestoda,Eukaryota;Animals;Flatworms,117.182,0,0,0,1,web
+Opisthorchis felineus,Trematoda,Eukaryota;Animals;Flatworms,679.246,0,0,0,1,web
+Opisthorchis viverrini,Trematoda,Eukaryota;Animals;Flatworms,620.453,0,0,0,2,web
+Paragonimus heterotremus,Trematoda,Eukaryota;Animals;Flatworms,841.211,0,0,0,1,web
+Paragonimus westermani,Trematoda,Eukaryota;Animals;Flatworms,922.85,0,1,0,1,web
+Protopolystoma xenopodis,Polyopisthocotylea,Eukaryota;Animals;Flatworms,617.345,0,0,0,1,web
+Rodentolepis nana,Cestoda,Eukaryota;Animals;Flatworms,162.944,0,0,0,1,web
+Schistocephalus solidus,Cestoda,Eukaryota;Animals;Flatworms,539.425,0,0,0,1,web
+Schistosoma bovis,Trematoda,Eukaryota;Animals;Flatworms,373.478,0,1,0,1,web
+Schistosoma japonicum,Trematoda,Eukaryota;Animals;Flatworms,369.901,0,0,0,2,web
+Schistosoma mansoni,Trematoda,Eukaryota;Animals;Flatworms,364.538,8,1,0,1,web
+Schmidtea mediterranea,'Turbellaria',Eukaryota;Animals;Flatworms,942.042,0,0,0,4,web
+Sparganum proliferum,Cestoda,Eukaryota;Animals;Flatworms,653.387,0,0,0,1,web
+Spirometra erinaceieuropaei,Cestoda,Eukaryota;Animals;Flatworms,1258.72,0,0,0,1,web
+Taenia multiceps,Cestoda,Eukaryota;Animals;Flatworms,240.611,7,1,0,1,web
+Taenia saginata,Cestoda,Eukaryota;Animals;Flatworms,169.104,0,0,0,1,web
+Taenia solium,Cestoda,Eukaryota;Animals;Flatworms,129.811,0,0,0,3,web
+Trichobilharzia regenti,Trematoda,Eukaryota;Animals;Flatworms,701.762,0,0,0,1,web
+Kapentagyrus tanganicanus,Monopisthocotylea,,,,,,,data/assemblies/Ktan.PLATANUS.min1000.fasta
+Dictyocotyle coeliaca,Monopisthocotylea,,,,,,,data/assemblies/Dcoe_PLATANUS.scaffolds.min500.fasta
+Diclidophora denticulata,Polyopisthocotylea,,,,,,,data/assemblies/Dden.PLATANUS.min1000.filtered.fasta
+Eudiplozoon_nipponicum,Polyopisthocotylea,,,,,,,data/assemblies/EN_final.genome.scf.fasta
