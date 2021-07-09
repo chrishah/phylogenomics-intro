@@ -430,7 +430,7 @@ What do you think? It's actually quite messy..
 Let's move on to score and filter the alignment, using [Aliscore](https://www.zfmk.de/en/research/research-centres-and-groups/aliscore) and [Alicut](https://github.com/PatrickKueck/AliCUT) programs. 
 ```bash
 (user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/alicut-aliscore-docker:2.31 \
-Aliscore.pl -N -r 200000000000000000 -i $ID.clustalo.aln.fasta &> aliscore.log
+Aliscore.pl -N -i $ID.clustalo.aln.fasta &> aliscore.log
 (user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/alicut-aliscore-docker:2.31 \
 ALICUT.pl -s &> alicut.log
 ```
@@ -501,12 +501,12 @@ __5.) Run the process for multiple genes__
 
 Now, let's say we want to go over this process for each of our 300+ genes that passd our filtering criteria. A script that does all the above steps run for each BUSCO would do it. I've made a very simple one that also fetches the individual genes for each of the BUSCO ids. You could try e.g. the following, which assumes this:
   - you've run the BUSCO analyses for all datasets and they are in directories called like the name of the species in the `/home/ubuntu/Share/BUSCO_runs/` directory, so, e.g.: `/home/ubuntu/Share/BUSCO_runs/Schistosoma_mansoni`
-  - the directory where you are running the following contains the files `ingroup.txt` and `outgroup.txt` that list the taxa to be considered ingroup and outgroup, respectively. The taxon names need to correspond to the sample specific directories you ran the BUSCO analysis in. The below runs it for the first 5 BUSCOs that passed our criteria. If you want to run it for all, you'd remove the `head -n 5`.
+  - the directory where you are running the following contains the files `ingroup.txt` and `outgroup.txt` that list the taxa to be considered ingroup and outgroup, respectively. The taxon names need to correspond to the sample specific directories you ran the BUSCO analysis in. The below runs it for the first 3 BUSCOs that passed our criteria. If you want to run it for all, you'd remove the `head -n 3`.
 
 
 ```bash
 (user@host)-$ threads=2
-(user@host)-$ for BUSCO in $(cat summary.tsv | grep "pass$" | cut -f 1 | head -n 5)
+(user@host)-$ for BUSCO in $(cat summary.tsv | grep "pass$" | cut -f 1 | head -n 3)
 do
 	echo $BUSCO
 	./scripts/per_BUSCO.sh $BUSCO $threads /home/ubuntu/Share/BUSCO_runs/
