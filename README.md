@@ -515,8 +515,8 @@ done
  
 Next step is to concatenate all trimmed alignments into a single supermatrix. Let's do that in a new directory.
 ```bash
-(user@host)-$ mkdir post-filtering-concat
-(user@host)-$ cd post-filtering-concat
+(user@host)-$ mkdir concat
+(user@host)-$ cd concat
 ```
 
 Get the fasta files.
@@ -524,10 +524,6 @@ Get the fasta files.
 (user@host)-$ cp ../EOG091G00AH/ALICUT_EOG091G00AH.clustalo.aln.fasta \
 ../EOG091G00GM/ALICUT_EOG091G00GM.clustalo.aln.fasta \
 ../EOG091G00GQ/ALICUT_EOG091G00GQ.clustalo.aln.fasta .
-```
-I've made a simple script that finds the trimmed alignments given our data structure and only keeps alignemnts that are longer than 200 amino acids.
-```bash
-(user@host)-$ ../../script/post-filter.sh ../../data/checkpoints/per_gene/OTHERS/
 ```
 
 Now, let's concatenate all files into a single supermatrix using `FASconCAT-g` (see [here](https://www.zfmk.de/en/research/research-centres-and-groups/fasconcat-g)).
@@ -544,17 +540,9 @@ Took a few seconds. We can look at the logfile `concat.log` to get some info abo
 (user@host)-$ cat concat.log
 ```
 
-Now, we're ready to build our phylogenomic tree. First we need to put two more files in place. I'll do that in a new directory. First, I just copy the supermatrix from the previous step to here. Second, I create a so-called partition file `partitions.txt`, that contains the coordinates of the original genes in the supermatrix and specifies the best model of protein evolution we've determined before. I'll get this info from the output of FASconCAT and our individual gene analyses with some 'bash-magic'.
+Now, we're ready to build our phylogenomic tree. I create a so-called partition file `partitions.txt`, that contains the coordinates of the original genes in the supermatrix and specifies the best model of protein evolution we've determined before. I'll get this info from the output of FASconCAT and our individual gene analyses with some 'bash-magic'.
 ```bash
-(user@host)-$ cd ..
-(user@host)-$ mkdir phylogenomic-ML
-(user@host)-$ cd phylogenomic-ML
-
-#get supermatrix
-(user@host)-$ cp ../post-filtering-concat/FcC_supermatrix.fas .
-
-#create partitions file
-(user@host)-$ for line in $(cat ../post-filtering-concat/FcC_info.xls | grep "ALICUT" | cut -f 1-3 | sed 's/\t/|/g')
+(user@host)-$ for line in $(cat FcC_info.xls | grep "ALICUT" | cut -f 1-3 | sed 's/\t/|/g')
 do
 	id=$(echo -e "$line" | cut -d "|" -f 1 | sed 's/ALICUT_//' | sed 's/.clustalo.*//')
 	model=$(cat $(find ../ -name "$id.bestmodel") | grep "Best" | cut -d ":" -f 2 | tr -d '[:space:]')
@@ -566,21 +554,16 @@ Have a look at `partitions.txt`.
 
 Run RAxML.
 ```bash
+(user@host)-$ threads=2
 (user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/raxml-docker:8.2.12 \
 raxml -f a -T 3 -m PROTGAMMAWAG -p 12345 -q ./partitions.txt -x 12345 -# 100 -s FcC_supermatrix.fas -n super
 ```
 
 This will run for a few minutes.
 
-I've deposited the final tree under `data/checkpoints/phylogenomics_ML/RAxML_bipartitions.alignment_min6`.
+I've deposited the final tree under `data/RAxML_bipartitions.first_3_genes`.
 
-We can inspect it in one of the above mentioned online tree viewers. 
-
-
-
-I've deposited the final tree under `data/checkpoints/phylogenomics_ML/RAxML_bipartitions.alignment_min6`.
-
-We can inspect it in one of the above mentioned online tree viewers. 
+We can inspect it in one of the above mentioned online tree viewers, e.g. [iTOL](https://itol.embl.de/upload.cgi). 
 
 
 __5.) Automate the workflow with Snakemake__
@@ -589,16 +572,16 @@ A very neat way of handling this kind of thing is [Snakemake](https://snakemake.
 
 Remember our `summary.tsv` file from before? Let's move to where this is located.
 ```bash
-(user@host)-$ cd ../../
+(user@host)-$ cd ../
 ```
 
-Here, we also have a `Snakefile.txt` (it came with the repository that you downloaded). This file contains the instructions for running a workflow with Snakemake. Let's have a look.
+Here, we also have a file called `Snakefile` (it came with the repository that you downloaded). This file contains the instructions for running a workflow with Snakemake. Let's have a look.
 
 ```bash
-(user@host)-$ less Snakefile.txt #exit less with 'q'
+(user@host)-$ less Snakefile #exit less with 'q'
 ```
 
-In the Snakefile you'll see 'rules' (that's what individual steps in the analyses are called in the Snakemake world). Some of which should look familiar, because we just ran them manually. Filenames etc. are replaced with variables but other than that..
+In the Snakefile you'll see 'rules' (that's what individual steps in the analyses are called in the Snakemake world). Some of which should look familiar, because we just ran them manually, and then from within a simple bash script. Filenames etc. are replaced with variables but other than that..
 
 In addition to the steps we just did manually, the workflow will also create a concatenated alignment - a 'supermatrix' - once all indiviual alignments are finished, and then run `RAxML` a final time on the supermatrix, taking into account the individual best models of protein evolution for each gene that we have identified.
 
@@ -617,12 +600,12 @@ For time reasons, we only want to run the analyses for the first 20 genes that p
 ```
 
 ```bash
-(snakemake) (user@host)-$ snakemake -n -s Snakefile.txt \
---use-singularity --singularity-args "-B $(pwd) -B /home/classdata/Day5/" \
+(snakemake) (user@host)-$ snakemake -n -s Snakefile \
+--use-singularity --singularity-args "-B $(pwd) -B /home/ubuntu/Share/Day5/" \
 --latency-wait 50 \
 -j 4 -p \
 --config \
-dir=/home/classdata/Day5/BUSCO_runs \
+dir=/home/ubuntu/Share/BUSCO_runs \
 ingroup="$(pwd)/ingroup.txt" outgroup="$(pwd)/outgroup.txt" \
 files="$(cat my_subset.txt | tr '\n' ' ' | sed 's/ $//')" \
 taxids="$(pwd)/taxids.txt"
@@ -631,12 +614,12 @@ taxids="$(pwd)/taxids.txt"
 Now, this was a dry run, and you kind of get an idea what will be happening. No erros, so everything seems to be fine. Shall we try it for real? Rerun, but ommit the `-n` flag this time - this told Snakemake that we only wanted a dry run.
 
 ```bash
-(snakemake) (user@host)-$ snakemake -n -s Snakefile.txt \
---use-singularity --singularity-args "-B $(pwd) -B /home/classdata/Day5/" \
+(snakemake) (user@host)-$ snakemake -s Snakefile \
+--use-singularity --singularity-args "-B $(pwd) -B /home/ubuntu/Share/Day5/" \
 --latency-wait 50 \
 -j 4 -p \
 --config \
-dir=/home/classdata/Day5/BUSCO_runs \
+dir=/home/ubuntu/Share/BUSCO_runs \
 ingroup="$(pwd)/ingroup.txt" outgroup="$(pwd)/outgroup.txt" \
 files="$(cat my_subset.txt | tr '\n' ' ' | sed 's/ $//')" \
 taxids="$(pwd)/taxids.txt"
