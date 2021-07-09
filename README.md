@@ -594,9 +594,9 @@ Snakemake is installed on your system. In order run Snakemake you first need to 
 
 I have set up the Snakefile so that we have to give some parameters to Snakemake via the command line. You could also do that via a configuration file, but like this I am more flexible.
 
-For time reasons, we only want to run the analyses for the first 20 genes that passed our criteria. Let's get them out of the `summary.tsv` file and into a new file `my_subset.txt`.
+For time reasons, we only want to run the analyses for the first 3 genes that passed our criteria. Let's get them out of the `summary.tsv` file and into a new file `my_subset.txt`.
 ```bash
-(snakemake) (user@host)-$ cat summary.tsv | grep -P "\tpass" | head -n 20 | cut -f 1 > my_subset.txt
+(snakemake) (user@host)-$ cat summary.tsv | grep -P "\tpass" | head -n 3 | cut -f 1 > my_subset.txt
 ```
 
 ```bash
@@ -605,7 +605,7 @@ For time reasons, we only want to run the analyses for the first 20 genes that p
 --latency-wait 50 \
 -j 4 -p \
 --config \
-dir=/home/ubuntu/Share/BUSCO_runs \
+dir=/home/ubuntu/Share/Day5/BUSCO_runs \
 ingroup="$(pwd)/ingroup.txt" outgroup="$(pwd)/outgroup.txt" \
 files="$(cat my_subset.txt | tr '\n' ' ' | sed 's/ $//')" \
 taxids="$(pwd)/taxids.txt"
@@ -619,7 +619,7 @@ Now, this was a dry run, and you kind of get an idea what will be happening. No 
 --latency-wait 50 \
 -j 4 -p \
 --config \
-dir=/home/ubuntu/Share/BUSCO_runs \
+dir=/home/ubuntu/Share/Day5/BUSCO_runs \
 ingroup="$(pwd)/ingroup.txt" outgroup="$(pwd)/outgroup.txt" \
 files="$(cat my_subset.txt | tr '\n' ' ' | sed 's/ $//')" \
 taxids="$(pwd)/taxids.txt"
@@ -653,6 +653,24 @@ Let's have a look with [iTOL](https://itol.embl.de/upload.cgi). Note, I am again
 (snakemake) (user@host)-$ cat data/reformated.RAxML_Corrected_Lossless_IC_Score_BranchLabels.TC 
 (((Mesocestoides_corti:0.11382175458723173267,((((Kapentagyrus_tanganicanus:0.37056695730754030116,((Gyrodactylus_bullatarudis:0.23973499259064837141,Gyrodactylus_salaris:0.26186250827709700584)0.813:0.33531984156394206709,Dictyocotyle_coeliaca:0.33468595952253094028)0.477:0.04321815271258070551)0.804:0.13630735625407652822,((Drosophila_melanogaster:0.49739815989886448921,(Cionia_intestinalis:0.47024946596909422691,(Danio_rerio:0.15906656119182147058,Rattus_norvegicus:0.14256395229098053901)0.821:0.17546133837449690018)0.561:0.07534725451188568901)0.697:0.23686787431138991988,(Schmidtea_mediterranea:0.09265905798734777599,Dugesia_japonica:0.10758755163140210076)0.703:0.49082413635911525951)0.520:0.11721256073439016709)0.189:0.04514198592165186152,(((((Fasciolopsis_buski:0.12314202132856488792,(Fasciola_gigantica:0.14686458395490634143,Fasciola_hepatica:0.04904295105908970664)0.561:0.04110413255140191180)0.609:0.02400932038248752842,Echinostoma_caproni:0.12849775075359745613)0.206:0.09450712362479178619,((Paragonimus_heterotremus:0.07823113191895705865,Paragonimus_westermani:0.07312617177590630124)0.690:0.10846325959356475921,(Clonorchis_sinensis:0.01770115338741783811,(Opisthorchis_viverrini:0.04817423183688491345,Opisthorchis_felineus:0.04544915068851628631)0.477:0.00657747865734801054)0.841:0.12524751424784802412)0.619:0.04426753715195563127)0.189:0.06790551400483556266,(Trichobilharzia_regenti:0.12567820298270102053,((Schistosoma_mansoni:0.03653156631204165783,Schistosoma_bovis:0.03990340723740078838)0.789:0.03657038711521183594,Schistosoma_japonicum:0.10768987330529999902)0.541:0.03415232070419779026)0.835:0.13566805310046556321)0.817:0.10769581211852248537,(Protopolystoma_xenopodis:0.24790699440159275069,(Eudiplozoon_nipponicum:0.27562366428684492714,Diclidophora_denticulata:0.13559800727544354948)1.000:0.18855942925413535227)0.278:0.10123952603231373137)0.328:0.03248939271548581531)0.838:0.15918341908895150549,(Schistocephalus_solidus:0.05308211462818494819,(Sparganum_proliferum:0.05627350778340294013,Spirometra_erinaceieuropaei:0.02427653023662926582)1.000:0.04156928305134222068)1.000:0.14572812698839465728)0.419:0.10312201304300923355)0.337:0.04960481839566012463,((Hydatigera_taeniaeformis:0.06995673418424694368,((Taenia_saginata:0.00993938860823944878,Taenia_multiceps:0.01831445652767186433)0.598:0.01231540977111486058,Taenia_solium:0.02397521754854715914)0.690:0.02957522174137439119)0.189:0.01077369939674101620,(Echinococcus_multilocularis:0.01421602883589030003,Echinococcus_canadensis:0.01188040184204420743)0.804:0.03694741512317966520)0.481:0.06038755425646366581)0.828:0.14186474816667632437,(Hymenolepis_microstoma:0.03958746079266604878,Rodentolepis_nana:0.03684667540504209943)0.809:0.03517208801464582341,Hymenolepis_diminuta:0.05365320128818799189);
 ```
+
+Snakemake has a nice feature, which allows you to display your workflow as a so-called rulegraph - you can get it like so (the previous snakemake command, plus an extra option):
+```bash
+(snakemake) (user@host)-$ snakemake -s Snakefile \
+--use-singularity --singularity-args "-B $(pwd) -B /home/ubuntu/Share/Day5/" \
+--latency-wait 50 \
+-j 4 -p \
+--config \
+dir=/home/ubuntu/Share/Day5/BUSCO_runs \
+ingroup="$(pwd)/ingroup.txt" outgroup="$(pwd)/outgroup.txt" \
+files="$(cat my_subset.txt | tr '\n' ' ' | sed 's/ $//')" \
+taxids="$(pwd)/taxids.txt" \
+--rulegraph | dot -Tpdf > rulegraph.pdf
+```
+
+Find it in `data/rulegraph.pdf`..
+
+![Rulegraph](data/rulegraph.pdf)
 
 __Thanks for joining us today!__
 
