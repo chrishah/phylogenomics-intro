@@ -500,7 +500,7 @@ And of course, we get our best scoring Maximum Likelihood tree.
 __5.) Run the process for multiple genes__
 
 Now, let's say we want to go over this process for each of our 300+ genes that passd our filtering criteria. A script that does all the above steps run for each BUSCO would do it. I've made a very simple one that also fetches the individual genes for each of the BUSCO ids. You could try e.g. the following, which assumes this:
-  - you've run the BUSCO analyses for all datasets and they are in directories called like the name of the species in the `/home/ubuntu/Share/BUSCO_runs/` directory, so, e.g.: `/home/ubuntu/Share/BUSCO_runs/Schistosoma_mansoni`
+  - you've run the BUSCO analyses for all datasets and they are in directories called like the name of the species in the `/home/ubuntu/Day5/Share/BUSCO_runs/` directory, so, e.g.: `/home/ubuntu/Share/Day5/BUSCO_runs/Schistosoma_mansoni`
   - the directory where you are running the following contains the files `ingroup.txt` and `outgroup.txt` that list the taxa to be considered ingroup and outgroup, respectively. The taxon names need to correspond to the sample specific directories you ran the BUSCO analysis in. The below runs it for the first 3 BUSCOs that passed our criteria. If you want to run it for all, you'd remove the `head -n 3`.
 
 
@@ -509,7 +509,7 @@ Now, let's say we want to go over this process for each of our 300+ genes that p
 (user@host)-$ for BUSCO in $(cat summary.tsv | grep "pass$" | cut -f 1 | head -n 3)
 do
 	echo $BUSCO
-	./scripts/per_BUSCO.sh $BUSCO $threads /home/ubuntu/Share/BUSCO_runs/
+	./scripts/per_BUSCO.sh $BUSCO $threads /home/ubuntu/Share/Day5/BUSCO_runs/
 done
 ```
  
