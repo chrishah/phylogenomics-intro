@@ -84,16 +84,50 @@ I comes compressed, so we need to decompress:
 ```
 
 Now we want to run BUSCO to identify the set of core genes in our genome. This will take a little while for each assembly, depending on the computational resources you have available. I'll start with one to give you an example. I suggest you copy paste and hit enter for now, while it is running we will talk about some details of the command.
+
+First, make sure you know where your database is, either downloaded yourself or provided somewhere on the server, and save the location into a variable `mydb`.
+
 ```bash
+(user@host)-$ mydb=$(pwd)/metazoa_odb9 #if downloaded yourself as above
+(user@host)-$ mydb=/home/ubuntu/Share/Day5/metazoa_odb9 #e.g. if provided on a server
+```
+
+Now, move to your species' directory and run BUSCO - __if running on a server, please use the second command__.
+```bash
+(user@host)-$ cd Schistosoma_mansoni
+
+#### if running locally
 (user@host)-$ docker run --rm \
 -v $(pwd):/in -w /in \
+-v $mydb:$mydb \
 chrishah/busco-docker:v3.1.0 \
 run_BUSCO.py \
 --in ./GCF_000237925.1_ASM23792v2_genomic.fna \
 --out S_mansoni \
--l ./metazoa_odb9 \
+-l $mydb \
 --mode genome -c 4 -f \
 -sp schistosoma --augustus_parameters='--progress=true'
+
+#### if running on a server, we enter the container
+#### start busco, and
+#### detach with a key combination
+(user@host)-$ docker run --rm \
+-v $(pwd):/in -w /in \
+-v $mydb:$mydb \
+--name $USER-busco -e DB=$mydb -it \
+chrishah/busco-docker:v3.1.0 
+
+root@c528f3385b9d:/in# run_BUSCO.py \
+--in ./GCF_000237925.1_ASM23792v2_genomic.fna \
+--out S_mansoni \
+-l $DB \
+--mode genome -c 4 -f \
+-sp schistosoma --augustus_parameters='--progress=true' &> busco.log
+
+## Then you can detach from the container by pressing 'CTRL-P + CTRL-Q'
+## it will keep running in the background until it's done
+## you can check what busco is doing by looking into the busco.log file
+
 ```
 
 Here's some more details, as promised:
@@ -297,30 +331,30 @@ Let's try it for our BUSCO `EOG091G11IM` across a bunch of BUSCO results. We can
 -i ingroup.txt -o outgroup.txt --max_mis_in 2 --max_mis_out 1 \
 --max_avg 1 --max_med 1 \
 -B EOG091G11IM \
--f /home/classdata/Day5/BUSCO_runs/Taenia_solium/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Schistosoma_mansoni/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Echinococcus_multilocularis/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Hymenolepis_diminuta/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Fasciola_gigantica/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Dictyocotyle_coeliaca/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Kapentagyrus_tanganicanus/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Protopolystoma_xenopodis/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Eudiplozoon_nipponicum/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Clonorchis_sinensis/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Dugesia_japonica/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Schmidtea_mediterranea/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Gyrodactylus_bullatarudis/run_busco/full_table_busco.tsv \
-/home/classdata/Day5/BUSCO_runs/Diclidophora_denticulata/run_busco/full_table_busco.tsv
+-f /home/ubuntu/Share/Day5/BUSCO_runs/Taenia_solium/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Schistosoma_mansoni/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Echinococcus_multilocularis/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Hymenolepis_diminuta/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Fasciola_gigantica/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Dictyocotyle_coeliaca/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Kapentagyrus_tanganicanus/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Protopolystoma_xenopodis/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Eudiplozoon_nipponicum/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Clonorchis_sinensis/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Dugesia_japonica/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Schmidtea_mediterranea/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Gyrodactylus_bullatarudis/run_busco/full_table_busco.tsv \
+/home/ubuntu/Share/Day5/BUSCO_runs/Diclidophora_denticulata/run_busco/full_table_busco.tsv
 ```
 
 This BUSCO passes our filter criteria. No more than one sample missing for either the in- or the outgroup, average number of paralogs per sample <= 2 and median number of paralogs is <= 2 , as well. Great.
-With some 'bash-magic' I don't even need to manually list all the tables (not showing the output here) - again, I am just pointing to my backup tables here, if you actually ran all of the above you'd need to adjust to `-f $(find /home/classdata/Day5/BUSCO_runs/ -name "full_table*")`.
+With some 'bash-magic' I don't even need to manually list all the tables (not showing the output here) - again, I am just pointing to my backup tables here, if you actually ran all of the above you'd need to adjust this part - `-f $(find /home/ubuntu/Share/Day5/BUSCO_runs/ -name "full_table*")` - to point somewhere else.
 ```bash
 (user@host)-$ ./scripts/evaluate.py \
 -i ingroup.txt -o outgroup.txt --max_mis_in 2 --max_mis_out 1 \
 --max_avg 2 --max_med 2 \
 -B EOG091G11IM \
--f $(find /home/classdata/Day5/BUSCO_runs/ -name "full_table*")
+-f $(find /home/ubuntu/Share/Day5/BUSCO_runs/ -name "full_table*")
 ```
 
 And finally, we can run it across all BUSCO genes, by not specifying any partiular BUSCO Id. Note that I have provided the name for an output file that will receive the summary.
@@ -329,7 +363,7 @@ And finally, we can run it across all BUSCO genes, by not specifying any partiul
 -i ingroup.txt -o outgroup.txt --max_mis_in 4 --max_mis_out 1 \
 --max_avg 1 --max_med 1 \
 --outfile summary.tsv \
--f $(find /home/classdata/Day5/BUSCO_runs/ -name "full_table*") 
+-f $(find /home/ubuntu/Share/Day5/BUSCO_runs/ -name "full_table*") 
 # Ingroup taxa: ['Clonorchis_sinensis', 'Echinococcus_multilocularis', 'Fasciola_gigantica', 'Gyrodactylus_bullatarudis', 'Hymenolepis_diminuta', 'Protopolystoma_xenopodis', 'Schistosoma_mansoni', 'Taenia_solium', 'Kapentagyrus_tanganicanus', 'Dictyocotyle_coeliaca', 'Diclidophora_denticulata', 'Eudiplozoon_nipponicum']
 # Outgroup taxa ['Dugesia_japonica', 'Schmidtea_mediterranea']
 # tables included: ['/home/classdata/Day5/BUSCO_runs/Taenia_solium/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Schistosoma_mansoni/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Echinococcus_multilocularis/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Hymenolepis_diminuta/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Fasciola_gigantica/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Dictyocotyle_coeliaca/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Kapentagyrus_tanganicanus/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Protopolystoma_xenopodis/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Eudiplozoon_nipponicum/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Clonorchis_sinensis/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Dugesia_japonica/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Schmidtea_mediterranea/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Gyrodactylus_bullatarudis/run_busco/full_table_busco.tsv', '/home/classdata/Day5/BUSCO_runs/Diclidophora_denticulata/run_busco/full_table_busco.tsv']
@@ -371,7 +405,7 @@ Here are all steps for `EOG091G11IM` as an example. I have deposited the intiial
 (user@host)-$ mkdir EOG091G11IM
 (user@host)-$ cd EOG091G11IM
 (user@host)-$ bash ../../scripts/fetch_seqs.sh EOG091G11IM \
-/home/classdata/Day5/BUSCO_runs/ ../../ingroup.txt ../../outgroup.txt
+/home/ubuntu/Share/Day5/BUSCO_runs/ ../../ingroup.txt ../../outgroup.txt
 ```
 
 Now, step by step.
@@ -386,7 +420,7 @@ Perform multiple sequence alignment with [clustalo](http://www.clustal.org/omega
 (user@host)-$ docker run --rm \
 -v $(pwd):/in -w /in \
 chrishah/clustalo-docker:1.2.4 \
-clustalo -i $ID.fasta -o $ID.clustalo.aln.fasta --threads=$threads
+clustalo -i $ID.fasta -o $ID.clustalo.aln.fasta --threads=$threads --verbose
 ```
 
 We can then look at the alignment result. There is a number of programs available to do that, e.g. MEGA, Jalview, Aliview, or you can do it online. A link to the upload client for the NCBI Multiple Sequence Alignment Viewer is [here](https://www.ncbi.nlm.nih.gov/projects/msaviewer/?appname=ncbi_msav&openuploaddialog) (I suggest to open in new tab). Upload (`EOG091G11IM.clustalo.aln.fasta`), press 'Close' button, and have a look.
@@ -462,9 +496,96 @@ And of course, we get our best scoring Maximum Likelihood tree.
 ```
 .. in the Newick tree format. There is a bunch of programs that allow you to view and manipulate trees in this format. You can only do it online, for example through [iTOL](https://itol.embl.de/upload.cgi), embl's online tree viewer. There is others, e.g. [ETE3](http://etetoolkit.org/treeview/), [icytree](https://icytree.org/), or [trex](http://www.trex.uqam.ca/index.php?action=newick&project=trex). You can try it out.
 
-Now, let's say we want to go over this process for each of the hundreds of genes that passd our filtering criteria. A script that does all the above steps run for each BUSCO would do it. A very neat way of handling this kind of thing is [Snakemake](https://snakemake.readthedocs.io/en/stable/).
+
+__5.) Run the process for multiple genes__
+
+Now, let's say we want to go over this process for each of our 300+ genes that passd our filtering criteria. A script that does all the above steps run for each BUSCO would do it. I've made a very simple one that also fetches the individual genes for each of the BUSCO ids. You could try e.g. the following, which assumes this:
+  - you've run the BUSCO analyses for all datasets and they are in directories called like the name of the species in the `/home/ubuntu/Share/BUSCO_runs/` directory, so, e.g.: `/home/ubuntu/Share/BUSCO_runs/Schistosoma_mansoni`
+  - the directory where you are running the following contains the files `ingroup.txt` and `outgroup.txt` that list the taxa to be considered ingroup and outgroup, respectively. The taxon names need to correspond to the sample specific directories you ran the BUSCO analysis in. The below runs it for the first 5 BUSCOs that passed our criteria. If you want to run it for all, you'd remove the `head -n 5`.
+
+
+```bash
+(user@host)-$ threads=2
+(user@host)-$ for BUSCO in $(cat summary.tsv | grep "pass$" | cut -f 1 | head -n 5)
+do
+	echo $BUSCO
+	./scripts/per_BUSCO.sh $BUSCO $threads /home/ubuntu/Share/BUSCO_runs/
+done
+```
+ 
+Next step is to concatenate all trimmed alignments into a single supermatrix. Let's do that in a new directory.
+```bash
+(user@host)-$ mkdir post-filtering-concat
+(user@host)-$ cd post-filtering-concat
+```
+
+Get the fasta files.
+```bash
+(user@host)-$ cp ../EOG091G00AH/ALICUT_EOG091G00AH.clustalo.aln.fasta \
+../EOG091G00GM/ALICUT_EOG091G00GM.clustalo.aln.fasta \
+../EOG091G00GQ/ALICUT_EOG091G00GQ.clustalo.aln.fasta .
+```
+I've made a simple script that finds the trimmed alignments given our data structure and only keeps alignemnts that are longer than 200 amino acids.
+```bash
+(user@host)-$ ../../script/post-filter.sh ../../data/checkpoints/per_gene/OTHERS/
+```
+
+Now, let's concatenate all files into a single supermatrix using `FASconCAT-g` (see [here](https://www.zfmk.de/en/research/research-centres-and-groups/fasconcat-g)).
+```bash
+(user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/fasconcat-g:1.04 \
+FASconCAT-G.pl -a -a -s > concat.log
+#remove the indivdiual alignment files. We don't need them any more.
+(user@host)-$ rm *.aln.fas
+
+```
+
+Took a few seconds. We can look at the logfile `concat.log` to get some info about our supermatrix. The info is also there in an excel table `FcC_info.xls`.
+```bash
+(user@host)-$ cat concat.log
+```
+
+Now, we're ready to build our phylogenomic tree. First we need to put two more files in place. I'll do that in a new directory. First, I just copy the supermatrix from the previous step to here. Second, I create a so-called partition file `partitions.txt`, that contains the coordinates of the original genes in the supermatrix and specifies the best model of protein evolution we've determined before. I'll get this info from the output of FASconCAT and our individual gene analyses with some 'bash-magic'.
+```bash
+(user@host)-$ cd ..
+(user@host)-$ mkdir phylogenomic-ML
+(user@host)-$ cd phylogenomic-ML
+
+#get supermatrix
+(user@host)-$ cp ../post-filtering-concat/FcC_supermatrix.fas .
+
+#create partitions file
+(user@host)-$ for line in $(cat ../post-filtering-concat/FcC_info.xls | grep "ALICUT" | cut -f 1-3 | sed 's/\t/|/g')
+do
+	id=$(echo -e "$line" | cut -d "|" -f 1 | sed 's/ALICUT_//' | sed 's/.clustalo.*//')
+	model=$(cat $(find ../ -name "$id.bestmodel") | grep "Best" | cut -d ":" -f 2 | tr -d '[:space:]')
+	echo -e "$model, $id = $(echo -e "$line" | cut -d "|" -f 2,3 | sed 's/|/-/')"
+done > partitions.txt
+
+```
+Have a look at `partitions.txt`.
+
+Run RAxML.
+```bash
+(user@host)-$ docker run --rm -v $(pwd):/in -w /in chrishah/raxml-docker:8.2.12 \
+raxml -f a -T 3 -m PROTGAMMAWAG -p 12345 -q ./partitions.txt -x 12345 -# 100 -s FcC_supermatrix.fas -n super
+```
+
+This will run for a few minutes.
+
+I've deposited the final tree under `data/checkpoints/phylogenomics_ML/RAxML_bipartitions.alignment_min6`.
+
+We can inspect it in one of the above mentioned online tree viewers. 
+
+
+
+I've deposited the final tree under `data/checkpoints/phylogenomics_ML/RAxML_bipartitions.alignment_min6`.
+
+We can inspect it in one of the above mentioned online tree viewers. 
+
 
 __5.) Automate the workflow with Snakemake__
+
+A very neat way of handling this kind of thing is [Snakemake](https://snakemake.readthedocs.io/en/stable/).
 
 Remember our `summary.tsv` file from before? Let's move to where this is located.
 ```bash
@@ -548,9 +669,3 @@ Let's have a look with [iTOL](https://itol.embl.de/upload.cgi). Note, I am again
 ```bash
 (snakemake) (user@host)-$ cat data/reformated.RAxML_Corrected_Lossless_IC_Score_BranchLabels.TC 
 (((Mesocestoides_corti:0.11382175458723173267,((((Kapentagyrus_tanganicanus:0.37056695730754030116,((Gyrodactylus_bullatarudis:0.23973499259064837141,Gyrodactylus_salaris:0.26186250827709700584)0.813:0.33531984156394206709,Dictyocotyle_coeliaca:0.33468595952253094028)0.477:0.04321815271258070551)0.804:0.13630735625407652822,((Drosophila_melanogaster:0.49739815989886448921,(Cionia_intestinalis:0.47024946596909422691,(Danio_rerio:0.15906656119182147058,Rattus_norvegicus:0.14256395229098053901)0.821:0.17546133837449690018)0.561:0.07534725451188568901)0.697:0.23686787431138991988,(Schmidtea_mediterranea:0.09265905798734777599,Dugesia_japonica:0.10758755163140210076)0.703:0.49082413635911525951)0.520:0.11721256073439016709)0.189:0.04514198592165186152,(((((Fasciolopsis_buski:0.12314202132856488792,(Fasciola_gigantica:0.14686458395490634143,Fasciola_hepatica:0.04904295105908970664)0.561:0.04110413255140191180)0.609:0.02400932038248752842,Echinostoma_caproni:0.12849775075359745613)0.206:0.09450712362479178619,((Paragonimus_heterotremus:0.07823113191895705865,Paragonimus_westermani:0.07312617177590630124)0.690:0.10846325959356475921,(Clonorchis_sinensis:0.01770115338741783811,(Opisthorchis_viverrini:0.04817423183688491345,Opisthorchis_felineus:0.04544915068851628631)0.477:0.00657747865734801054)0.841:0.12524751424784802412)0.619:0.04426753715195563127)0.189:0.06790551400483556266,(Trichobilharzia_regenti:0.12567820298270102053,((Schistosoma_mansoni:0.03653156631204165783,Schistosoma_bovis:0.03990340723740078838)0.789:0.03657038711521183594,Schistosoma_japonicum:0.10768987330529999902)0.541:0.03415232070419779026)0.835:0.13566805310046556321)0.817:0.10769581211852248537,(Protopolystoma_xenopodis:0.24790699440159275069,(Eudiplozoon_nipponicum:0.27562366428684492714,Diclidophora_denticulata:0.13559800727544354948)1.000:0.18855942925413535227)0.278:0.10123952603231373137)0.328:0.03248939271548581531)0.838:0.15918341908895150549,(Schistocephalus_solidus:0.05308211462818494819,(Sparganum_proliferum:0.05627350778340294013,Spirometra_erinaceieuropaei:0.02427653023662926582)1.000:0.04156928305134222068)1.000:0.14572812698839465728)0.419:0.10312201304300923355)0.337:0.04960481839566012463,((Hydatigera_taeniaeformis:0.06995673418424694368,((Taenia_saginata:0.00993938860823944878,Taenia_multiceps:0.01831445652767186433)0.598:0.01231540977111486058,Taenia_solium:0.02397521754854715914)0.690:0.02957522174137439119)0.189:0.01077369939674101620,(Echinococcus_multilocularis:0.01421602883589030003,Echinococcus_canadensis:0.01188040184204420743)0.804:0.03694741512317966520)0.481:0.06038755425646366581)0.828:0.14186474816667632437,(Hymenolepis_microstoma:0.03958746079266604878,Rodentolepis_nana:0.03684667540504209943)0.809:0.03517208801464582341,Hymenolepis_diminuta:0.05365320128818799189);
-```
-
-__What do you think?__
-
-# Contact
-Christoph Hahn - <christoph.hahn@uni-graz.at>

@@ -1,0 +1,950 @@
+# Ingroup taxa: ['Clonorchis_sinensis', 'Echinococcus_multilocularis', 'Fasciola_gigantica', 'Gyrodactylus_bullatarudis', 'Hymenolepis_diminuta', 'Protopolystoma_xenopodis', 'Schistosoma_mansoni', 'Taenia_solium', 'Kapentagyrus_tanganicanus', 'Dictyocotyle_coeliaca', 'Diclidophora_denticulata', 'Eudiplozoon_nipponicum']
+# Outgroup taxa ['Dugesia_japonica', 'Schmidtea_mediterranea']
+# tables included: ['../BUSCOS/Taenia_saginata/run_busco/full_table_busco.tsv', '../BUSCOS/Fasciolopsis_buski/run_busco/full_table_busco.tsv', '../BUSCOS/Hymenolepis_diminuta/run_busco/full_table_busco.tsv', '../BUSCOS/Taenia_solium/run_busco/full_table_busco.tsv', '../BUSCOS/Schistosoma_mansoni/run_busco/full_table_busco.tsv', '../BUSCOS/Sparganum_proliferum/run_busco/full_table_busco.tsv', '../BUSCOS/Echinococcus_multilocularis/run_busco/full_table_busco.tsv', '../BUSCOS/Protopolystoma_xenopodis/run_busco/full_table_busco.tsv', '../BUSCOS/Eudiplozoon_nipponicum/run_busco/full_table_busco.tsv', '../BUSCOS/Schistosoma_japonicum/run_busco/full_table_busco.tsv', '../BUSCOS/Mesocestoides_corti/run_busco/full_table_busco.tsv', '../BUSCOS/Diclidophora_denticulata/run_busco/full_table_busco.tsv', '../BUSCOS/Taenia_multiceps/run_busco/full_table_busco.tsv', '../BUSCOS/Paragonimus_heterotremus/run_busco/full_table_busco.tsv', '../BUSCOS/Echinostoma_caproni/run_busco/full_table_busco.tsv', '../BUSCOS/Schistosoma_bovis/run_busco/full_table_busco.tsv', '../BUSCOS/Spirometra_erinaceieuropaei/run_busco/full_table_busco.tsv', '../BUSCOS/Fasciola_hepatica/run_busco/full_table_busco.tsv', '../BUSCOS/Dictyocotyle_coeliaca/run_busco/full_table_busco.tsv', '../BUSCOS/Gyrodactylus_salaris/run_busco/full_table_busco.tsv', '../BUSCOS/Fasciola_gigantica/run_busco/full_table_busco.tsv', '../BUSCOS/Paragonimus_westermani/run_busco/full_table_busco.tsv', '../BUSCOS/Gyrodactylus_bullatarudis/run_busco/full_table_busco.tsv', '../BUSCOS/Opisthorchis_viverrini/run_busco/full_table_busco.tsv', '../BUSCOS/Kapentagyrus_tanganicanus/run_busco/full_table_busco.tsv', '../BUSCOS/Schmidtea_mediterranea/run_busco/full_table_busco.tsv', '../BUSCOS/Opisthorchis_felineus/run_busco/full_table_busco.tsv', '../BUSCOS/Hymenolepis_microstoma/run_busco/full_table_busco.tsv', '../BUSCOS/Rodentolepis_nana/run_busco/full_table_busco.tsv', '../BUSCOS/Hydatigera_taeniaeformis/run_busco/full_table_busco.tsv', '../BUSCOS/Trichobilharzia_regenti/run_busco/full_table_busco.tsv', '../BUSCOS/Schistocephalus_solidus/run_busco/full_table_busco.tsv', '../BUSCOS/Dugesia_japonica/run_busco/full_table_busco.tsv', '../BUSCOS/Clonorchis_sinensis/run_busco/full_table_busco.tsv', '../BUSCOS/Echinococcus_canadensis/run_busco/full_table_busco.tsv']
+# maximum number of ingroup samples with missing data: 4
+# maximum number of outgroup samples with missing data: 1
+# maximum average number of paralogs: 1
+# maximum median number of paralogs: 1
+#
+# Can't assign the file ../BUSCOS/Taenia_saginata/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Fasciolopsis_buski/run_busco/full_table_busco.tsv to in or outgroup
+# found BUSCO table for taxon Hymenolepis_diminuta -> ingroup
+# found BUSCO table for taxon Taenia_solium -> ingroup
+# found BUSCO table for taxon Schistosoma_mansoni -> ingroup
+# Can't assign the file ../BUSCOS/Sparganum_proliferum/run_busco/full_table_busco.tsv to in or outgroup
+# found BUSCO table for taxon Echinococcus_multilocularis -> ingroup
+# found BUSCO table for taxon Protopolystoma_xenopodis -> ingroup
+# found BUSCO table for taxon Eudiplozoon_nipponicum -> ingroup
+# Can't assign the file ../BUSCOS/Schistosoma_japonicum/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Mesocestoides_corti/run_busco/full_table_busco.tsv to in or outgroup
+# found BUSCO table for taxon Diclidophora_denticulata -> ingroup
+# Can't assign the file ../BUSCOS/Taenia_multiceps/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Paragonimus_heterotremus/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Echinostoma_caproni/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Schistosoma_bovis/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Spirometra_erinaceieuropaei/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Fasciola_hepatica/run_busco/full_table_busco.tsv to in or outgroup
+# found BUSCO table for taxon Dictyocotyle_coeliaca -> ingroup
+# Can't assign the file ../BUSCOS/Gyrodactylus_salaris/run_busco/full_table_busco.tsv to in or outgroup
+# found BUSCO table for taxon Fasciola_gigantica -> ingroup
+# Can't assign the file ../BUSCOS/Paragonimus_westermani/run_busco/full_table_busco.tsv to in or outgroup
+# found BUSCO table for taxon Gyrodactylus_bullatarudis -> ingroup
+# Can't assign the file ../BUSCOS/Opisthorchis_viverrini/run_busco/full_table_busco.tsv to in or outgroup
+# found BUSCO table for taxon Kapentagyrus_tanganicanus -> ingroup
+# found BUSCO table for taxon Schmidtea_mediterranea -> outgroup
+# Can't assign the file ../BUSCOS/Opisthorchis_felineus/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Hymenolepis_microstoma/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Rodentolepis_nana/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Hydatigera_taeniaeformis/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Trichobilharzia_regenti/run_busco/full_table_busco.tsv to in or outgroup
+# Can't assign the file ../BUSCOS/Schistocephalus_solidus/run_busco/full_table_busco.tsv to in or outgroup
+# found BUSCO table for taxon Dugesia_japonica -> outgroup
+# found BUSCO table for taxon Clonorchis_sinensis -> ingroup
+# Can't assign the file ../BUSCOS/Echinococcus_canadensis/run_busco/full_table_busco.tsv to in or outgroup
+## BUSCO ID	n ingroup	n outgroup	paralog counts(sorted)	avg. paralogs	median paralogs
+EOG091G00AH	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G00GM	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G00GQ	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G00MA	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G00MI	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G00Q0	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G00QT	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G00UD	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G00VZ	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G00Z3	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.230769	1.000000	fail (average)
+EOG091G011X	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G017G	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.142857	1.000000	fail (average)
+EOG091G017T	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G01EW	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G01GC	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G01IW	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G01LC	7	1	[1, 1, 1, 1, 1, 2, 2, 3]	1.500000	1.000000	fail (count)
+EOG091G01S9	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G01TH	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G01TX	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G01VH	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G01WY	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G01XD	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G01XI	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G01XQ	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.142857	1.000000	fail (average)
+EOG091G020Y	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G023Z	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G024J	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G025T	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0262	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G026I	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G027G	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G028G	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0291	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G029K	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G02B4	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G02BK	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G02C8	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G02FR	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G02HY	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G02IP	11	2	[1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3]	1.538462	1.000000	fail (average)
+EOG091G02LY	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G02MR	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G02NH	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G02O5	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G02O6	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G02P2	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G02UC	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G02V5	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G02VO	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G02WU	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G02ZI	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0307	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.153846	1.000000	fail (average)
+EOG091G031X	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0321	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G036A	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G036C	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G036T	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G038T	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03AN	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G03B9	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03BV	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G03FL	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G03G3	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03I1	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G03JF	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G03JX	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G03LI	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03M4	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.181818	1.000000	fail (average)
+EOG091G03O0	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03OT	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03P0	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03QC	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.250000	1.000000	fail (average)
+EOG091G03RW	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03TX	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03TZ	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03XO	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03XS	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G03Y8	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G03Z1	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G040G	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G040L	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G046H	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G046Y	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0495	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G049W	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G04CK	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G04D1	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G04EX	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G04FV	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G04GW	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G04IK	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G04LC	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G04RS	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G050A	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G050Q	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0525	3	2	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0530	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G053A	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G053D	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G053R	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G054P	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0554	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G057L	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G059G	11	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G05AA	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05AH	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G05D7	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05EU	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G05GZ	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05IK	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05K5	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05KR	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G05N4	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05NK	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G05NZ	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G05OR	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05OW	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G05Q0	4	2	[1, 1, 1, 1, 1, 2]	1.166667	1.000000	fail (count)
+EOG091G05Q6	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05RA	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G05SE	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05T4	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4]	1.642857	1.000000	fail (average)
+EOG091G05TG	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05X1	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G05YC	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05ZE	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G060D	8	0	[1, 1, 1, 1, 1, 1, 1, 2]	1.125000	1.000000	fail (count)
+EOG091G0627	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0628	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G062X	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.200000	1.000000	fail (average)
+EOG091G065D	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G069C	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06CB	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06EF	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G06HP	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06I8	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06J6	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G06JJ	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G06LW	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G06M8	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06MR	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06ON	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06OP	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.181818	1.000000	fail (average)
+EOG091G06P4	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G06QP	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06S3	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06U0	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06XK	5	2	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G06Y3	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06Y7	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0703	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G073F	11	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G074G	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G074U	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G075K	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G078D	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G079R	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G07CE	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G07D9	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G07DR	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G07EJ	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G07IY	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G07KC	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G07KL	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.142857	1.000000	fail (average)
+EOG091G07N8	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G07NJ	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G07OD	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G07PR	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G07PV	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G07QN	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G07S9	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G07VQ	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G07Z0	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G07Z5	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0803	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0814	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G085U	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G088L	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08BK	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.250000	1.000000	fail (average)
+EOG091G08D1	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08FX	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08JE	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08L8	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08LT	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08NN	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08O3	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08PW	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G08RU	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08SM	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08UU	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08V8	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G08VB	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08ZG	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G08ZR	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G095O	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G096V	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0977	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G099D	6	2	[1, 1, 1, 1, 1, 1, 2, 3]	1.375000	1.000000	fail (count)
+EOG091G09BP	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09D8	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09FV	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G09GA	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G09GO	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09HG	12	2	[1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 4, 4]	2.214286	2.500000	fail (average) (median)
+EOG091G09HR	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09J7	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.200000	1.000000	fail (average)
+EOG091G09KI	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G09KX	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09MU	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.153846	1.000000	fail (average)
+EOG091G09QO	12	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09RJ	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G09SS	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.200000	1.000000	fail (average)
+EOG091G09T6	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09U9	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09UA	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09UB	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09V2	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0A0M	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0A19	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0A27	5	1	[1, 1, 1, 1, 1, 2]	1.166667	1.000000	fail (count)
+EOG091G0A2I	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0A2L	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0A5N	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0A79	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0A98	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0AE2	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0AE9	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0AEL	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0AFP	12	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AGM	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AGT	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0AHJ	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0AKM	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0AKW	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.214286	1.000000	fail (average)
+EOG091G0AO6	8	0	[1, 1, 1, 1, 1, 1, 1, 2]	1.125000	1.000000	fail (count)
+EOG091G0AOO	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0ARE	10	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0ARL	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AU6	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AVP	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0AX1	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0AZ7	3	1	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0B27	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0B2N	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0B9B	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0B9T	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0BAG	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0BAM	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0BBO	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0BG4	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0BHP	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0BHV	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.166667	1.000000	fail (average)
+EOG091G0BKZ	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0BL9	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0BNI	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0BPX	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0BQF	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.153846	1.000000	fail (average)
+EOG091G0BTX	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0BUD	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6]	1.384615	1.000000	fail (average)
+EOG091G0BUH	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.166667	1.000000	fail (average)
+EOG091G0BX3	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0C2M	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0C6I	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0C7Y	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0C8H	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0CAR	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0CEG	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0CEK	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0CEW	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.181818	1.000000	fail (average)
+EOG091G0CF7	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0CFP	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0CGO	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0CH6	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0CID	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.181818	1.000000	fail (average)
+EOG091G0CLR	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0CMN	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0CNT	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0CQ2	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.250000	1.000000	fail (average)
+EOG091G0CSZ	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0CTG	12	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G0CTU	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0CW2	7	2	[1, 1, 1, 1, 1, 1, 1, 2, 3]	1.333333	1.000000	fail (count)
+EOG091G0CZX	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0D04	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G0D0W	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0D26	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0D4N	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0D8I	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0DQS	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0DRZ	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DTD	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0DTE	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G0DTP	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0DUX	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DVQ	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0DXC	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0DXV	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0DYW	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0E06	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0E11	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0E2R	6	2	[1, 1, 1, 1, 1, 1, 2, 3]	1.375000	1.000000	fail (count)
+EOG091G0E2X	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0E3V	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0E5O	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G0E7S	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0E8J	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0EA2	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0EAF	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0EH8	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0EHY	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0EHZ	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0EKA	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.181818	1.000000	fail (average)
+EOG091G0ELO	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0ELS	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0ER1	12	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ERU	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0ES6	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0EVK	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.166667	1.000000	fail (average)
+EOG091G0EZ8	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0FAM	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.181818	1.000000	fail (average)
+EOG091G0FH3	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0FIJ	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G0FJB	12	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0FPM	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.200000	1.000000	fail (average)
+EOG091G0FPV	6	1	[1, 1, 1, 1, 1, 1, 2]	1.142857	1.000000	fail (count)
+EOG091G0FQ2	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0FS8	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0FTU	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.166667	1.000000	fail (average)
+EOG091G0FWS	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0FXV	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0G3M	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0G6C	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.200000	1.000000	fail (average)
+EOG091G0G6Z	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3]	1.363636	1.000000	fail (average)
+EOG091G0G71	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0G8R	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G0GBB	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0GDF	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0GIC	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0GKH	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0GN7	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0GOU	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0GQO	10	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0GWF	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0GWO	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0GY1	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0H0S	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0H14	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0H3D	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.272727	1.000000	fail (average)
+EOG091G0H3U	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0H64	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0H6A	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4]	1.272727	1.000000	fail (average)
+EOG091G0H8F	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0HAI	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0HC5	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0HJH	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0HML	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0HMT	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0HOK	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0HS4	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0HSB	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0HTU	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0HXI	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.142857	1.000000	fail (average)
+EOG091G0HXJ	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0HYF	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0HZK	6	1	[1, 1, 1, 1, 1, 1, 2]	1.142857	1.000000	fail (count)
+EOG091G0I2X	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0I2Z	6	2	[1, 1, 1, 1, 1, 1, 1, 2]	1.125000	1.000000	fail (count)
+EOG091G0I85	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0I8J	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ID9	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IDG	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IDP	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (count)
+EOG091G0IHL	5	2	[1, 1, 1, 1, 1, 1, 2]	1.142857	1.000000	fail (count)
+EOG091G0ILS	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IMD	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0IQ7	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IQD	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IRO	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0ITS	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IUT	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IVB	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IWR	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IXA	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0IXT	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0IXY	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0IYB	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IZX	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0J09	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0J14	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0J2W	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0J61	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0J69	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0J98	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JBM	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0JBZ	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JEC	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JGU	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JHQ	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JI0	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JI1	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JMY	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JU7	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0JUY	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0JYQ	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0JZV	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0K1G	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0K1Z	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.153846	1.000000	fail (average)
+EOG091G0K2R	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0K6O	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0K95	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0K98	3	1	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0K9M	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.153846	1.000000	fail (average)
+EOG091G0KGO	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0KM6	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0KNT	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G0KPB	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0KR3	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.181818	1.000000	fail (average)
+EOG091G0KRB	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0KSQ	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0KSX	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.181818	1.000000	fail (average)
+EOG091G0KUR	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0KVW	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.214286	1.000000	fail (average)
+EOG091G0L2T	6	2	[1, 1, 1, 1, 1, 1, 1, 2]	1.125000	1.000000	fail (count)
+EOG091G0L4M	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0L4Z	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0L5D	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0L5H	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0L5X	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0L66	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0L84	10	1	[1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2]	1.454545	1.000000	fail (average)
+EOG091G0LCK	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0LCT	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0LFF	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0LIN	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.250000	1.000000	fail (average)
+EOG091G0LKE	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.181818	1.000000	fail (average)
+EOG091G0LMQ	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0LRI	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0LS0	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G0LT1	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G0LZ0	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0M0J	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0M0S	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0M0T	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0M12	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.142857	1.000000	fail (average)
+EOG091G0M22	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2]	1.307692	1.000000	fail (average)
+EOG091G0M24	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0M4K	6	2	[1, 1, 1, 1, 1, 1, 1, 2]	1.125000	1.000000	fail (count)
+EOG091G0M8S	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MB2	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0MCM	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MCZ	2	1	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0MDD	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MDT	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MHM	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0MI7	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MKY	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.166667	1.000000	fail (average)
+EOG091G0MLD	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MMY	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.181818	1.000000	fail (average)
+EOG091G0MP6	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MRS	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3]	1.571429	1.000000	fail (average)
+EOG091G0MSB	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.142857	1.000000	fail (average)
+EOG091G0MUD	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MVL	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MVR	11	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0MY0	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MY8	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MZC	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0N0A	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0N0R	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0N2F	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0N9D	6	1	[1, 1, 1, 1, 1, 1, 2]	1.142857	1.000000	fail (count)
+EOG091G0N9Z	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0NIU	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0NIY	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0NK3	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0NMJ	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0NNO	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0NOA	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0NP6	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0NQW	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0NTO	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G0NVA	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.200000	1.000000	fail (average)
+EOG091G0O6E	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0O7O	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0O9D	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0OFC	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0OHF	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0OI8	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ONT	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0OTI	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0OUM	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G0OWI	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0P5N	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.153846	1.000000	fail (average)
+EOG091G0P9B	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0PAG	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G0PD3	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.181818	1.000000	fail (average)
+EOG091G0PEI	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0PHL	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0PIU	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.153846	1.000000	fail (average)
+EOG091G0PL0	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0PNO	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0PNP	5	2	[1, 1, 1, 2, 2, 2, 2]	1.571429	2.000000	fail (count)
+EOG091G0PUZ	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0PXB	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0Q02	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0Q1X	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0Q27	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0Q58	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0Q7M	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0QCX	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0QE1	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0QEQ	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0QGZ	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0QIP	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0QJA	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3]	1.285714	1.000000	fail (average)
+EOG091G0QKK	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0QNR	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0QPG	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0QRW	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.166667	1.000000	fail (average)
+EOG091G0QS4	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0QS6	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0QUH	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.181818	1.000000	fail (average)
+EOG091G0QW9	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0QZ2	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0R04	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0R0A	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0R21	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0R3S	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0R6Z	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0RA2	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0RCI	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0RHX	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0RI9	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0RM8	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0RPE	10	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0RR3	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0RRE	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0RRN	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3]	1.454545	1.000000	fail (average)
+EOG091G0RRT	5	2	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0RT1	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0RTZ	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0RVD	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.250000	1.000000	fail (average)
+EOG091G0RWW	11	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0S8Y	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0SBR	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0SM9	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0SNM	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0SQV	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0SRJ	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0SRZ	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G0SU6	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0TA6	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0TKH	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0TNU	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.153846	1.000000	fail (average)
+EOG091G0TQF	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0TRW	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0TSE	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0TVG	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0TWR	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0TZU	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0TZX	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0U2U	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0U4B	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0U75	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0UB5	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.142857	1.000000	fail (average)
+EOG091G0UE6	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0UKA	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0UKP	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0ULR	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0UOM	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0UQ0	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0UYL	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.153846	1.000000	fail (average)
+EOG091G0V3C	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0VGJ	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0VIF	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3]	1.363636	1.000000	fail (average)
+EOG091G0VQK	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0VSN	3	1	[1, 1, 1, 2]	1.250000	1.000000	fail (count)
+EOG091G0VSZ	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0VTN	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.142857	1.000000	fail (average)
+EOG091G0VZF	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G0W1S	6	2	[1, 1, 1, 1, 1, 1, 1, 2]	1.125000	1.000000	fail (count)
+EOG091G0W26	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.200000	1.000000	fail (average)
+EOG091G0W2D	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0W5M	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0W6G	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0W8V	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0W96	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0WAL	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0WLL	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.071429	1.000000	fail (average)
+EOG091G0WPV	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0WT4	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.166667	1.000000	fail (average)
+EOG091G0WZ0	9	0	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0X3B	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.153846	1.000000	fail (average)
+EOG091G0X8F	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.181818	1.000000	fail (average)
+EOG091G0XHF	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0XN1	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3]	1.307692	1.000000	fail (average)
+EOG091G0XQ3	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0XVD	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0XXE	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.181818	1.000000	fail (average)
+EOG091G0XYP	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0XZC	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.200000	1.000000	fail (average)
+EOG091G0Y05	12	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0Y09	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0Y35	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0YCT	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0YHX	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.083333	1.000000	fail (average)
+EOG091G0YP6	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.181818	1.000000	fail (average)
+EOG091G0YU6	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G0YUO	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0YVI	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.142857	1.000000	fail (average)
+EOG091G0YZ0	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G0Z4E	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0Z6N	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ZDR	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ZEJ	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ZLI	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ZLQ	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ZRG	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0ZUA	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G105E	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.153846	1.000000	fail (average)
+EOG091G107U	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.166667	1.000000	fail (average)
+EOG091G1081	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G10CG	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G10FG	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.142857	1.000000	fail (average)
+EOG091G10IX	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G10O5	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G10SA	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 4]	1.333333	1.000000	fail (count)
+EOG091G10SJ	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G112U	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.153846	1.000000	fail (average)
+EOG091G113O	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G1144	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G114S	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.076923	1.000000	fail (average)
+EOG091G115J	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G11CG	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.230769	1.000000	fail (average)
+EOG091G11IM	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G11O6	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G11OU	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.230769	1.000000	fail (average)
+EOG091G126L	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G126R	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (count)
+EOG091G1285	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G12A5	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.153846	1.000000	fail (average)
+EOG091G1311	9	2	[1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2]	1.454545	1.000000	fail (average)
+EOG091G132G	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G134K	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G13IJ	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G13P1	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G1422	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 3]	1.222222	1.000000	fail (count)
+EOG091G1467	4	1	[1, 1, 1, 1, 2]	1.200000	1.000000	fail (count)
+EOG091G146E	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2]	1.357143	1.000000	fail (average)
+EOG091G15HS	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G15HV	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G15KV	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G15N9	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G15XS	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G16EY	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G17J4	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G17K3	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G1817	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G184V	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G18YA	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G197A	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G19WY	9	1	[1, 1, 1, 1, 1, 1, 1, 2, 2, 2]	1.300000	1.000000	fail (average)
+EOG091G19Y2	11	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]	1.166667	1.000000	fail (average)
+EOG091G1A1V	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G1A3H	3	2	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G1AP6	12	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G1BQN	10	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G1CLN	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G019V	5	2	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G026F	5	2	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0349	5	2	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G038X	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G03C7	6	1	[1, 1, 1, 1, 1, 1, 2]	1.142857	1.000000	fail (count)
+EOG091G03D7	4	2	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G03PD	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G03ZS	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G05CI	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G05ZJ	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G06DH	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G06I3	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G06OM	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 2, 3]	1.300000	1.000000	fail (average)
+EOG091G075F	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G07IK	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 3]	1.200000	1.000000	fail (average)
+EOG091G07Z1	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G087E	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G08JG	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0990	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09MD	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09O7	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G09R0	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G09T3	4	2	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AJ6	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AQA	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0AYM	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0C84	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0C9Y	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.090909	1.000000	fail (average)
+EOG091G0CR4	6	2	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0D8N	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DBF	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DQ3	6	0	[1, 1, 1, 1, 1, 2]	1.166667	1.000000	fail (count)
+EOG091G0DQT	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0DTB	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DXE	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0EMF	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0EZO	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0G88	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0GI9	2	2	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0GUK	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 2]	1.100000	1.000000	fail (average)
+EOG091G0GVZ	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (average)
+EOG091G0GZ4	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0H62	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0H6J	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0HS8	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IF3	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0IGG	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0II3	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0IMI	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0IX8	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0JHN	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0JWC	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0K82	10	0	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0KHF	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0KRZ	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0L3L	3	2	[1, 1, 1, 2, 2]	1.400000	1.000000	fail (count)
+EOG091G0LO1	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0LP5	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0LT0	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0LVQ	10	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0M04	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MBG	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MDG	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MF6	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0MJA	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0MSR	3	2	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0NKD	9	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0OPI	4	2	[1, 1, 1, 1, 1, 2]	1.166667	1.000000	fail (count)
+EOG091G0PVT	3	1	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0R9X	7	1	[1, 1, 1, 1, 1, 1, 1, 2]	1.125000	1.000000	fail (count)
+EOG091G0RRA	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G0RTI	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0S0I	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0SB2	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0SGH	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0SV1	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0TCJ	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0UQZ	5	1	[1, 1, 1, 1, 1, 2]	1.166667	1.000000	fail (count)
+EOG091G0UXY	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0UZ0	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0VNB	11	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0VWO	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0WCB	1	1	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0X1Z	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0XXM	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0YBP	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0Z6Z	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0ZWE	2	0	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G116R	5	2	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G11QL	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G1549	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G18BK	8	2	[1, 1, 1, 1, 1, 1, 1, 2, 2, 3]	1.400000	1.000000	fail (average)
+EOG091G00L0	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G01Z2	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G03C0	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G03SE	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G04WH	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G05FE	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G05LX	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G05XY	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G06YD	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0781	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G07N5	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G089T	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G09YB	4	1	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0BKX	7	0	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0BWJ	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0COC	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0D0D	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DND	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DPL	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DXP	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DYU	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0EHF	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0EUU	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0F0I	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0FYY	2	2	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0FZN	5	1	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0H5Q	8	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0HAT	9	2	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0HT4	2	0	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0IZD	2	0	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0J56	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0J7A	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0K1H	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0K92	2	0	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0KC3	10	1	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0KEQ	2	2	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0KJA	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0KS8	6	1	[1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0L5I	8	1	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	pass
+EOG091G0LMY	8	0	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0LPW	2	1	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0NH9	1	1	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0P4K	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0QBN	6	2	[1, 1, 1, 1, 1, 1, 1, 3]	1.250000	1.000000	fail (count)
+EOG091G0T79	1	2	[1, 1, 2]	1.333333	1.000000	fail (count)
+EOG091G0TM2	3	1	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0VMU	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0W0U	7	1	[1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0YY3	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G10MO	2	0	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G14DH	2	2	[1, 1, 1, 2]	1.250000	1.000000	fail (count)
+EOG091G0O5A	7	2	[1, 1, 1, 1, 1, 1, 2, 2, 3]	1.444444	1.000000	fail (count)
+EOG091G048B	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G05UF	6	0	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G081H	5	0	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G090D	3	1	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AI5	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0ILG	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 2]	1.111111	1.000000	fail (count)
+EOG091G0LAR	4	0	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0OWC	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0QNW	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0RKU	3	1	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0S2R	2	0	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0U3W	2	1	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0VVZ	7	2	[1, 1, 1, 1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G13XF	5	0	[1, 1, 1, 1, 2]	1.200000	1.000000	fail (count)
+EOG091G0M3C	3	2	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0Q05	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G0HDF	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0Y96	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G167Y	4	2	[1, 1, 1, 1, 1, 2]	1.166667	1.000000	fail (count)
+EOG091G00CM	4	2	[1, 1, 1, 1, 1, 2]	1.166667	1.000000	fail (count)
+EOG091G03H4	1	2	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G07PH	1	1	[1, 2]	1.500000	1.500000	fail (count)
+EOG091G07Q3	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0HBC	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0HQ3	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G11CO	4	2	[1, 1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G17I3	1	1	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G081C	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G09L6	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G0I7M	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0L5Z	3	1	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0TN4	0	2	[2, 3]	2.500000	2.500000	fail (count)
+EOG091G09IW	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0TZ2	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0G8S	2	2	[1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0P5H	1	1	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0FOR	1	1	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G08R8	2	1	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0S5L	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G0K0D	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G0UTL	3	2	[1, 1, 1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G040D	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G05IH	3	2	[1, 1, 1, 1, 2]	1.200000	1.000000	fail (count)
+EOG091G07FP	3	0	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AVW	1	1	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0DWW	2	0	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0F93	1	2	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0IS6	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0LBN	1	2	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0MG7	2	2	[1, 1, 1, 3]	1.500000	1.000000	fail (count)
+EOG091G0N0U	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0O97	1	1	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0W86	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G02E4	1	1	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G09Q2	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0JIA	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G18Z5	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G0JC7	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0TAU	2	1	[1, 1, 1]	1.000000	1.000000	fail (count)
+EOG091G0F70	2	0	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0H07	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G0NP7	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G18B1	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G0MBX	1	0	[1]	1.000000	1.000000	fail (count)
+EOG091G020E	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G02OE	0	2	[1, 2]	1.500000	1.500000	fail (count)
+EOG091G0769	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G08Y9	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AEH	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0BPU	0	2	[1, 2]	1.500000	1.500000	fail (count)
+EOG091G0CXE	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0G58	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0GA7	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0GKX	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G0I1O	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G0IMB	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0K0H	0	2	[1, 3]	2.000000	2.000000	fail (count)
+EOG091G0KGX	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G0LB8	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G0MLX	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0O40	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0OM4	0	2	[1, 3]	2.000000	2.000000	fail (count)
+EOG091G0SOZ	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0UUT	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0Y6M	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G11PB	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G1757	0	2	[1, 1]	1.000000	1.000000	fail (count)
+EOG091G0AVA	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G0ZNH	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G0IDE	0	0	[0]	0.000000	0.000000	fail (count)
+EOG091G01MK	0	1	[1]	1.000000	1.000000	fail (count)
+EOG091G0M4Q	0	1	[3]	3.000000	3.000000	fail (count)
+# Evaluated 905 BUSCOs - 358 (39.56 %) passed
